@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_Test-Automation</name>
+   <tag></tag>
+   <elementGuidId>ed273d9f-eacd-4c62-8098-9c8104ef8055</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.ps-submenu-content.ps-open.css-18unl23 > ul.css-ewdv3l > li.ps-menuitem-root.css-1tqrhto > a.ps-menu-button > span.ps-menu-label.css-12w9als > div.css-69i1ev > div.css-k008qs > p.chakra-text.css-1kx7qlb</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//body[@id='root']/div/div/aside/div/div/nav/ul/li[2]/div/ul/li/a/span/div/div/p</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>a >> internal:has-text=&quot;Test-Automation&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+      <webElementGuid>6cd71f73-e419-48cd-a081-03acbffd15f8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>chakra-text css-1kx7qlb</value>
+      <webElementGuid>ac10cce3-a47d-44cc-b6b3-b4e784ff10c2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Test-Automation</value>
+      <webElementGuid>96b18e79-296d-4da6-8c60-1b011a37c90c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;css-k008qs&quot;]/div[@class=&quot;applicationMenu css-1yeiifd&quot;]/aside[@class=&quot;ps-sidebar-root ps-toggled ps-broken css-11i2auh&quot;]/div[@class=&quot;ps-sidebar-container css-1mb249p&quot;]/div[@class=&quot;css-0&quot;]/nav[@class=&quot;ps-menu-root css-vj11vy&quot;]/ul[@class=&quot;css-ewdv3l&quot;]/li[@class=&quot;ps-menuitem-root ps-submenu-root ps-open css-16jesut&quot;]/div[@class=&quot;ps-submenu-content ps-open css-18unl23&quot;]/ul[@class=&quot;css-ewdv3l&quot;]/li[@class=&quot;ps-menuitem-root css-1tqrhto&quot;]/a[@class=&quot;ps-menu-button&quot;]/span[@class=&quot;ps-menu-label css-12w9als&quot;]/div[@class=&quot;css-69i1ev&quot;]/div[@class=&quot;css-k008qs&quot;]/p[@class=&quot;chakra-text css-1kx7qlb&quot;]</value>
+      <webElementGuid>225bd4f8-6152-4e0f-92be-49b2a1e60fd5</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//body[@id='root']/div/div/aside/div/div/nav/ul/li[2]/div/ul/li/a/span/div/div/p</value>
+      <webElementGuid>0d29f8c3-d0ad-4d90-92ad-686675af5e27</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='View more'])[1]/preceding::p[16]</value>
+      <webElementGuid>80a16718-ae3b-439c-9b9a-a94de21b534d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Know more'])[1]/preceding::p[19]</value>
+      <webElementGuid>a485754d-037e-49bc-a51e-3c742e1b134a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Test-Automation']/parent::*</value>
+      <webElementGuid>e42c3d5d-f798-4be0-a24f-6855257035be</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[2]/div/ul/li/a/span/div/div/p</value>
+      <webElementGuid>0c38149f-48b1-464c-8bf9-bac4c6b449bb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//p[(text() = 'Test-Automation' or . = 'Test-Automation')]</value>
+      <webElementGuid>271ad724-48fe-447c-a1f1-c3b04fd34ff8</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

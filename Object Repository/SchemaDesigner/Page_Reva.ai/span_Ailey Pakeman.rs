@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Ailey Pakeman</name>
+   <tag></tag>
+   <elementGuidId>5c805dd4-41c2-4762-b003-cd67b2d4fd92</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>span.cm-entityvalue-keyword</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='editorlayout']/div/div[6]/div/div/div/div/div[5]/div[2]/pre/span/span[4]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:text=&quot;\&quot;Ailey Pakeman\&quot;&quot;s</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>11fdee82-6d96-4d88-aab3-18a01bb7545c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>cm-entityvalue-keyword</value>
+      <webElementGuid>872bc519-06ca-4feb-a290-28359ab3cd02</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>&quot;Ailey Pakeman&quot;</value>
+      <webElementGuid>d0aebfe4-d1d3-4fe4-a54a-fcd9ff4125fc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;editorlayout&quot;)/div[@class=&quot;CodeMirror cm-s-xq-light CodeMirror-wrap CodeMirror-focused&quot;]/div[@class=&quot;CodeMirror-scroll&quot;]/div[@class=&quot;CodeMirror-sizer&quot;]/div[1]/div[@class=&quot;CodeMirror-lines&quot;]/div[1]/div[@class=&quot;CodeMirror-code&quot;]/div[2]/pre[@class=&quot;CodeMirror-line&quot;]/span[1]/span[@class=&quot;cm-entityvalue-keyword&quot;]</value>
+      <webElementGuid>3071fbc7-07de-43b3-a133-af6870beaeae</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='editorlayout']/div/div[6]/div/div/div/div/div[5]/div[2]/pre/span/span[4]</value>
+      <webElementGuid>dea806d4-4d31-4c70-9ff1-61541f91f7cd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='RevaHospital::Doctor::'])[1]/following::span[1]</value>
+      <webElementGuid>c76a238a-7a25-409a-9839-b544cc168bbe</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='=='])[1]/following::span[2]</value>
+      <webElementGuid>e562bfdf-a670-4784-93b9-875e12d3eef0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)=','])[1]/preceding::span[1]</value>
+      <webElementGuid>f9ab842d-1e54-4e67-bf26-f5fa5525a023</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='action'])[1]/preceding::span[2]</value>
+      <webElementGuid>6ad82eff-914c-42c2-8357-49fad3d7d1e6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='&quot;Ailey Pakeman&quot;']/parent::*</value>
+      <webElementGuid>5e094b9d-6b75-44f8-87af-3b528254d99f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span[4]</value>
+      <webElementGuid>bb35db62-524d-4ce6-8d5a-5d10e2ab2b9e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = '&quot;Ailey Pakeman&quot;' or . = '&quot;Ailey Pakeman&quot;')]</value>
+      <webElementGuid>5ecb02d6-6663-450d-a2db-06e95a6b0fe8</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

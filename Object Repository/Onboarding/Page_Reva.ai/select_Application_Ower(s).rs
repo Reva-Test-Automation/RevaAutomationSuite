@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Application_Ower(s)</name>
+   <tag></tag>
+   <elementGuidId>1239285a-f281-4d09-bd8d-fc7b9a6d2881</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.select__input-container.css-19bb58m</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//label[text()='Application owner(s)']/following-sibling::div/descendant::input[@class='select__input']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>.select__input-container</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>cf731ff7-c5ee-4961-88da-4602967bb8ca</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>select__input-container css-19bb58m</value>
+      <webElementGuid>070d60da-8744-4ee9-b842-2690e2757bcc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;css-k008qs&quot;]/div[@class=&quot;css-d4res&quot;]/div[@class=&quot;css-6ojjju&quot;]/div[@class=&quot;css-gsjzcg&quot;]/div[@class=&quot;css-8atqhb&quot;]/div[@class=&quot;css-98oke4&quot;]/div[@class=&quot;css-11g6wkx&quot;]/div[@class=&quot;css-j7qwjs&quot;]/div[@class=&quot;css-19kzrtu&quot;]/div[@class=&quot;css-g1ny8a&quot;]/div[@class=&quot;css-0&quot;]/div[@class=&quot;chakra-form-control css-1kxonj9&quot;]/div[@class=&quot;basic-multi-select css-b62m3t-container&quot;]/div[@class=&quot;select__control select__control--is-focused select__control--menu-is-open css-16asy67-control&quot;]/div[@class=&quot;select__value-container select__value-container--is-multi css-hlgwow&quot;]/div[@class=&quot;select__input-container css-19bb58m&quot;]</value>
+      <webElementGuid>7b4118a0-e354-4d0b-a9e1-13b184c1330d</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

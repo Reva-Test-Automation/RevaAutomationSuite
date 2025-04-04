@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_Forgot your password_signInSubmitButton</name>
+   <tag></tag>
+   <elementGuidId>b76308c6-880a-4801-80e8-6cce9c9c785f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div:nth-of-type(2) > div > div > form[name=&quot;cognitoSignInForm&quot;] > input[name=&quot;signInSubmitButton&quot;]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//input[@name='signInSubmitButton'])[2]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=button[name=&quot;submit&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>input</value>
+      <webElementGuid>5c77193e-dafe-4350-a220-3d77fa05dc60</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>signInSubmitButton</value>
+      <webElementGuid>d2d81853-6f75-4ff3-a2ff-174ec411d151</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>Submit</value>
+      <webElementGuid>64fc2057-7a91-4cd8-9ef5-9a04c5e90dde</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>value</name>
+      <type>Main</type>
+      <value>Sign in</value>
+      <webElementGuid>c93500e8-8edc-4972-a378-566c44fa0215</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>btn btn-primary submitButton-customizable</value>
+      <webElementGuid>e38dbf78-94f9-4ae4-a276-5be706a694a9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-label</name>
+      <type>Main</type>
+      <value>submit</value>
+      <webElementGuid>45ce1720-7281-498c-9c76-8bcb44b68b3b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;a-js a-audio a-video a-canvas a-svg a-drag-drop a-geolocation a-history a-webworker a-autofocus a-input-placeholder a-textarea-placeholder a-local-storage a-gradients a-transform3d a-touch-scrolling a-text-shadow a-text-stroke a-box-shadow a-border-radius a-border-image a-opacity a-transform a-transition&quot;]/body[1]/div[@class=&quot;container&quot;]/div[@class=&quot;modal-dialog&quot;]/div[@class=&quot;modal-content background-customizable modal-content-mobile visible-md visible-lg&quot;]/div[@class=&quot;modal-body&quot;]/div[2]/div[2]/div[1]/div[1]/form[@class=&quot;cognito-asf&quot;]/input[@class=&quot;btn btn-primary submitButton-customizable&quot;]</value>
+      <webElementGuid>eeb078f1-0e44-4f45-af58-d18ed80c3427</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//input[@name='signInSubmitButton'])[2]</value>
+      <webElementGuid>7a737b65-bb0b-4004-bd9d-5f33451018f1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/form/input[3]</value>
+      <webElementGuid>5b222dac-cafa-4857-b28a-fd5a8f7ac318</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//input[@name = 'signInSubmitButton' and @type = 'Submit']</value>
+      <webElementGuid>8d530e67-e3f3-4e7b-aba2-05da521766b8</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

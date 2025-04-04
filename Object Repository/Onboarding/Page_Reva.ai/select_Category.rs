@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Category</name>
+   <tag></tag>
+   <elementGuidId>81eef056-86d8-4884-964b-bd620132113e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.css-19bb58m</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//p[text()='Category']/following-sibling::div/descendant::input</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>.css-19bb58m >> nth=0</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>91bafb01-f9f2-40a2-b2e6-5a1291d0db85</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>css-19bb58m</value>
+      <webElementGuid>5d1d60ae-d68d-48c6-a222-56d6b48e3c04</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;css-k008qs&quot;]/div[@class=&quot;css-d4res&quot;]/div[@class=&quot;css-6ojjju&quot;]/div[@class=&quot;css-gsjzcg&quot;]/div[@class=&quot;css-8atqhb&quot;]/div[@class=&quot;css-98oke4&quot;]/div[@class=&quot;css-11g6wkx&quot;]/div[@class=&quot;css-j7qwjs&quot;]/div[@class=&quot;css-19kzrtu&quot;]/div[@class=&quot;css-g1ny8a&quot;]/div[@class=&quot;css-0&quot;]/div[@class=&quot;css-b62m3t-container&quot;]/div[@class=&quot;css-t3ipsp-control&quot;]/div[@class=&quot;css-hlgwow&quot;]/div[@class=&quot;css-19bb58m&quot;]</value>
+      <webElementGuid>fa478bcb-9dfe-4275-9417-39c947343d26</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

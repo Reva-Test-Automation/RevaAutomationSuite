@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>btn_Signin</name>
+   <tag></tag>
+   <elementGuidId>39bebaa3-32b6-4d59-9bd5-a7f5020ac7ff</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@name = 'signInSubmitButton']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class='modal-body']/div[2]/div[3]/div/div/form/input[3]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>btn-login</value>
+      <webElementGuid>63049b76-c8bd-4df7-b713-088f8a7f7951</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>signInSubmitButton</value>
+      <webElementGuid>48490c7a-3a76-4e1f-885b-35fb9be863c8</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

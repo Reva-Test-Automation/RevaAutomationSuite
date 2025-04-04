@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Continue</name>
+   <tag></tag>
+   <elementGuidId>b7c9747d-33bf-4b99-a1c2-b6ed8feff7a1</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>button.chakra-button.css-1v0vp0i</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[text()='Continue']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=button[name=&quot;Continue&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>dcd8b455-b31d-4af8-8f54-d2fd0ef32b47</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>a7adce2c-004d-4f10-b256-00d55c848d6f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>chakra-button css-1v0vp0i</value>
+      <webElementGuid>6f3a55ee-a425-4d8d-80ec-e9a2e3896551</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Continue</value>
+      <webElementGuid>ca0bd738-3e01-4b67-bcb3-e5dd8502cfc1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;css-k008qs&quot;]/div[@class=&quot;css-d4res&quot;]/div[@class=&quot;css-6ojjju&quot;]/div[@class=&quot;css-gsjzcg&quot;]/div[@class=&quot;css-8atqhb&quot;]/div[@class=&quot;css-98oke4&quot;]/div[@class=&quot;css-11g6wkx&quot;]/div[@class=&quot;css-j7qwjs&quot;]/div[@class=&quot;css-1vp80zl&quot;]/div[@class=&quot;css-ckyhk3&quot;]/button[@class=&quot;chakra-button css-1v0vp0i&quot;]</value>
+      <webElementGuid>d5b62fa2-b518-4dcf-9bf8-3352946ea4a4</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

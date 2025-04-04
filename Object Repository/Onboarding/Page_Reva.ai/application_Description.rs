@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>application_Description</name>
+   <tag></tag>
+   <elementGuidId>ecb1d94a-9798-464b-939b-2aef7d423245</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#description</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@name = 'description' and @placeholder = 'Give your application a description' and @id = 'description' and (text() = 'This for Testing' or . = 'This for Testing')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//textarea[@id='description']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:attr=[placeholder=&quot;Give your application a description&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>textarea</value>
+      <webElementGuid>6d9b61fe-a2d3-453f-aecc-c13ca32a2ec2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>description</value>
+      <webElementGuid>c6b908a8-9580-41c9-bb14-61eab0ea1963</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>placeholder</name>
+      <type>Main</type>
+      <value>Give your application a description</value>
+      <webElementGuid>bead6154-ad38-456b-9b29-b51a59a5bf9e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>description</value>
+      <webElementGuid>37a29167-f0ed-4ebb-8a2a-e822799b0983</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>chakra-textarea css-1hg9r7u</value>
+      <webElementGuid>62e47b07-62d5-4430-944e-8aad0ec824c8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>This for Testing</value>
+      <webElementGuid>ced74e09-9023-4c3f-8fbe-bb4fdc835b39</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;description&quot;)</value>
+      <webElementGuid>5468835a-5574-42e3-901d-2227a59aac7a</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//textarea[@id='description']</value>
+      <webElementGuid>8b48d9a7-3e74-4915-86b1-eb898c41d883</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

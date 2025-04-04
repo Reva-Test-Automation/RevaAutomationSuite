@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_Insurance</name>
+   <tag></tag>
+   <elementGuidId>919698e6-d6aa-49bf-88a0-ab7fabfdcdf1</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//body[@id='root']/div/div/aside/div/div/nav/ul/li[2]/a/span[2]/p</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>a >> internal:has-text=&quot;Insurance&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+      <webElementGuid>54f54417-5db7-4927-895f-cf495cdd6c88</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>chakra-text css-1giy96t</value>
+      <webElementGuid>e700d38d-6fee-4ea7-9092-f5a0f51cff3c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Insurance</value>
+      <webElementGuid>9957d8b9-5206-4698-a170-d0fbbb3b7f3e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;css-k008qs&quot;]/div[@class=&quot;applicationMenu css-1yeiifd&quot;]/aside[@class=&quot;ps-sidebar-root ps-toggled ps-broken css-11i2auh&quot;]/div[@class=&quot;ps-sidebar-container css-1mb249p&quot;]/div[@class=&quot;css-0&quot;]/nav[@class=&quot;ps-menu-root css-vj11vy&quot;]/ul[@class=&quot;css-ewdv3l&quot;]/li[@class=&quot;ps-menuitem-root ps-submenu-root css-16jesut&quot;]/a[@class=&quot;ps-menu-button&quot;]/span[@class=&quot;ps-menu-label css-12w9als&quot;]/p[@class=&quot;chakra-text css-1giy96t&quot;]</value>
+      <webElementGuid>09bf0e5b-4f70-41c3-b89e-37983a1753d0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//body[@id='root']/div/div/aside/div/div/nav/ul/li[2]/a/span[2]/p</value>
+      <webElementGuid>a7d37b60-2981-4435-b926-42aafe8a3137</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='View more'])[1]/preceding::p[17]</value>
+      <webElementGuid>ebba0053-7e63-4f3b-a4cb-d92f7c2e9a8e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Know more'])[1]/preceding::p[20]</value>
+      <webElementGuid>6c89a43b-5419-404a-b274-06197283b135</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Insurance']/parent::*</value>
+      <webElementGuid>2544a1b8-656c-4ca0-9d35-e4312e514c09</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[2]/a/span[2]/p</value>
+      <webElementGuid>d4f2936c-04ce-4a8d-81df-bf7655c965c0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//p[(text() = 'Insurance' or . = 'Insurance')]</value>
+      <webElementGuid>ad6baf29-280c-4ff7-aa38-dee4d956b8e3</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

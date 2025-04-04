@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_Permit Doctor-Ailey Pakeman to assignPati_c8417c</name>
+   <tag></tag>
+   <elementGuidId>e75fb2a5-5092-4250-9c36-55f388e1552d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>p.chakra-text.css-4wtktg</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//body[@id='root']/div/div[3]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div/div[2]/div/div/div/div[2]/p</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>p >> internal:has-text=&quot;Permit Doctor-\&quot;Ailey Pakeman\&quot; to \&quot;assignPatient\&quot; on All.&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+      <webElementGuid>bd51b91f-3ebd-4093-8c7c-941b66889ca8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>chakra-text css-4wtktg</value>
+      <webElementGuid>53b8ac3c-64aa-4d3d-b618-e564d9da3702</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-describedby</name>
+      <type>Main</type>
+      <value>tooltip-:r7i:</value>
+      <webElementGuid>b5d580cb-ad66-4c78-8c0b-e21bcd8b02ff</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Permit Doctor-&quot;Ailey Pakeman&quot; to &quot;assignPatient&quot; on All.</value>
+      <webElementGuid>8d8145a6-710a-4cc2-984e-34772c5ebd67</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;css-k008qs&quot;]/div[@class=&quot;css-d4res&quot;]/div[@class=&quot;css-6ojjju&quot;]/div[@class=&quot;css-gdt4ho&quot;]/div[@class=&quot;css-k008qs&quot;]/div[@class=&quot;css-aymlma&quot;]/div[@class=&quot;css-1n2mv2k&quot;]/div[@class=&quot;policy-builder css-1ofqig9&quot;]/div[@class=&quot;css-k008qs&quot;]/div[@class=&quot;Panel Code-Panel visible css-8atqhb&quot;]/div[@class=&quot;policy-panel css-17h9v6p&quot;]/div[@class=&quot;accordion css-n1vxix&quot;]/div[@class=&quot;css-0&quot;]/div[@class=&quot;css-1di4it&quot;]/div[@class=&quot;accordion-title active css-1hnet79&quot;]/div[@class=&quot;css-u4p24i&quot;]/p[@class=&quot;chakra-text css-4wtktg&quot;]</value>
+      <webElementGuid>099439c9-4ce4-493b-b430-4ce3154af5af</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//body[@id='root']/div/div[3]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div/div[2]/div/div/div/div[2]/p</value>
+      <webElementGuid>2bae71dc-515e-42af-9440-f7da208dac8f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Delete'])[2]/following::p[2]</value>
+      <webElementGuid>8bf3da30-315d-49eb-b867-f2b1fde6bbf6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Reset Node'])[5]/following::p[2]</value>
+      <webElementGuid>c0f775d3-2082-4968-af42-9384e7af72e0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='​'])[1]/preceding::p[1]</value>
+      <webElementGuid>3195eb72-9d00-4875-9d3f-8032075fde78</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Permit Doctor-&quot;Ailey Pakeman&quot; to &quot;assignPatient&quot; on All.']/parent::*</value>
+      <webElementGuid>0b973eca-120b-47ef-8848-040670a77ebe</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div/div[2]/p</value>
+      <webElementGuid>2498bcad-484c-46ad-9f31-100edc8d70d2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//p[(text() = 'Permit Doctor-&quot;Ailey Pakeman&quot; to &quot;assignPatient&quot; on All.' or . = 'Permit Doctor-&quot;Ailey Pakeman&quot; to &quot;assignPatient&quot; on All.')]</value>
+      <webElementGuid>48a0b3e4-2bbd-4a5a-9529-52b013f09655</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
