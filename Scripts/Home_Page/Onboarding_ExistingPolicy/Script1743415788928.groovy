@@ -25,6 +25,8 @@ import org.openqa.selenium.Keys as Keys
 		CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'()
 		// User logging into the Reva
 		CustomKeywords.'loginPage.UserLogin.Login'(GlobalVariable.UserName, GlobalVariable.Password)
+		
+		
 		// Validating logged in User
 		CustomKeywords.'homePage.VerifyLoggedInUser.ValidateUserDetails'()
 		// Creating Application > Basic Details
