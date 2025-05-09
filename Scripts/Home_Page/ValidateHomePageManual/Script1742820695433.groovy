@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'()
 
-CustomKeywords.'loginPage.UserLogin.Login'()
+CustomKeywords.'loginPage.UserLogin.Login'(GlobalVariable.UserName, GlobalVariable.Password)
 
 CustomKeywords.'homePage.VerifyLoggedInUser.ValidateUserDetails'()
 

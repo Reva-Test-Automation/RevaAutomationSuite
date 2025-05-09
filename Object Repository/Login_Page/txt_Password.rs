@@ -6,12 +6,12 @@
    <elementGuidId>9624a1b0-57ca-464e-b900-d1ce2e59650a</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@id = 'signInFormPassword']</value>
+         <key>XPATH</key>
+         <value>//input[@name='password']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@id='signInFormPassword'])[2]</value>
+         <key>BASIC</key>
+         <value>//*[@id = 'signInFormPassword']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,6 +23,6 @@
       <name>id</name>
       <type>Main</type>
       <value>signInFormPassword</value>
-      <webElementGuid>077aa0c4-321a-4d25-83cd-60ed4553f72d</webElementGuid>
+      <webElementGuid>ec3966d2-30ff-483c-80a3-c7a8f60556ce</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

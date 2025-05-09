@@ -6,12 +6,11 @@
    <elementGuidId>b5f1f6d0-48ee-4b91-ba6a-53272dfa5172</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//nav[contains(@class,'menuGrp menuGrp1')]/descendant::a[last()]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//nav[contains(@class,'menuGrp menuGrp1')]/descendant::a[4]</value>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -29,7 +28,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>svg</value>
-      <webElementGuid>38ceba70-12cc-4b69-8cdb-420da723a757</webElementGuid>
+      <webElementGuid>aa54c513-ac90-4f4b-8d91-a087acf6805f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -37,7 +36,7 @@
       <name>viewBox</name>
       <type>Main</type>
       <value>0 0 19 19</value>
-      <webElementGuid>b08042d1-2a07-4876-bbad-3a86959842b0</webElementGuid>
+      <webElementGuid>80fa0c7e-099b-4863-a1d6-f9d6bb72c34f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -45,7 +44,7 @@
       <name>focusable</name>
       <type>Main</type>
       <value>false</value>
-      <webElementGuid>49783181-c455-428c-b291-a4edb4a43f12</webElementGuid>
+      <webElementGuid>b80c50e4-b334-4d93-a992-49412c412be2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -53,7 +52,7 @@
       <name>class</name>
       <type>Main</type>
       <value>chakra-icon css-1yezc6o</value>
-      <webElementGuid>90fd57cc-3127-4f7c-8ed1-84008878cb8f</webElementGuid>
+      <webElementGuid>1cf8979e-e4c5-4681-a95d-9d843e9f71d7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -61,6 +60,6 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;root&quot;)/div[@class=&quot;css-k008qs&quot;]/div[@class=&quot;fixedNavbar css-sxixbk&quot;]/aside[@class=&quot;ps-sidebar-root ps-collapsed css-15tgy7o&quot;]/div[@class=&quot;ps-sidebar-container css-dip3t8&quot;]/div[@class=&quot;css-16ii2ds&quot;]/div[@class=&quot;css-0&quot;]/nav[@class=&quot;ps-menu-root menuGrp menuGrp1 css-vj11vy&quot;]/ul[@class=&quot;css-ewdv3l&quot;]/li[@class=&quot;ps-menuitem-root menuItem  css-1t8x7v1&quot;]/a[@class=&quot;ps-menu-button&quot;]/span[@class=&quot;ps-menu-label css-12w9als&quot;]/svg[@class=&quot;chakra-icon css-1yezc6o&quot;]</value>
-      <webElementGuid>d4e3ec5e-c774-49e0-b1b9-97943a4c18f2</webElementGuid>
+      <webElementGuid>9735df86-ba40-4b29-ad62-7554a057a8d9</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

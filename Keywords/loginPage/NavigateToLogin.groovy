@@ -22,9 +22,22 @@ import internal.GlobalVariable
 public class NavigateToLogin {
 	@Keyword
 	public void NavigateUrl() {
-		WebUI.openBrowser('')
-		WebUI.waitForPageLoad(10000)
 		WebUI.navigateToUrl(GlobalVariable.App_Url)
-		WebUI.maximizeWindow()
+	}
+
+	@Keyword
+	public void Login(String username, String password) {
+		WebUI.waitForElementVisible(findTestObject('Login_Page/txt_UserName'), 10)
+		WebUI.setText(findTestObject('Login_Page/txt_UserName'), username)
+		WebUI.setText(findTestObject('Login_Page/txt_Password'), password)
+		WebUI.click(findTestObject('Login_Page/btn_LogIn'))
+		WebUI.comment('User logged in successfully with username: ' + username)
+		WebUI.waitForPageLoad(5)
+		def skipButton = findTestObject('Object Repository/Login_Page/btn_Skip')
+		if (WebUI.verifyElementVisible(skipButton, FailureHandling.OPTIONAL)) {
+			WebUI.click(skipButton)
+		} else {
+			WebUI.comment('Skip button not displayed, continuing...')
+		}
 	}
 }

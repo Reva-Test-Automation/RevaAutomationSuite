@@ -6,12 +6,12 @@
    <elementGuidId>ca725b54-cd88-4c47-83d6-3fd3853a0bba</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@id = 'signInFormUsername']</value>
+         <key>XPATH</key>
+         <value>//input[@name='username']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@id='signInFormUsername'])[2]</value>
+         <key>BASIC</key>
+         <value>//*[@id = 'signInFormUsername']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,6 +23,6 @@
       <name>id</name>
       <type>Main</type>
       <value>signInFormUsername</value>
-      <webElementGuid>9388a51c-a06d-486f-a671-0ccb3e836110</webElementGuid>
+      <webElementGuid>f3f2a482-5c29-4cdd-8592-dc7ebc2d63d6</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

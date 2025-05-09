@@ -6,12 +6,11 @@
    <elementGuidId>73678389-f99b-452f-9310-8a6303df72ec</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//label[text()='Choose Integration']/following-sibling::div/descendant::input</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//label[text()='Connection']/following-sibling::div/descendant::input</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

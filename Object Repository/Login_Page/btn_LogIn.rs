@@ -6,12 +6,12 @@
    <elementGuidId>3a3ccc06-3cae-4926-9e31-d15a7b0bd6c6</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@name = 'signInSubmitButton']</value>
+         <key>XPATH</key>
+         <value>//button[@type='submit']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@class='modal-dialog']/descendant::form[@name='cognitoSignInForm'][2]/descendant::input[@name='signInSubmitButton']</value>
+         <key>BASIC</key>
+         <value>//*[@name = 'signInSubmitButton']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,6 +23,6 @@
       <name>name</name>
       <type>Main</type>
       <value>signInSubmitButton</value>
-      <webElementGuid>0d3b6017-9f08-45d7-b811-e02964c1b64f</webElementGuid>
+      <webElementGuid>98e3c672-de13-4ec1-87a4-350db9ab20d6</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

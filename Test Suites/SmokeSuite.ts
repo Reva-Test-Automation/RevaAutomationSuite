@@ -12,17 +12,17 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>2c95437e-e291-4759-bfbc-78178c7f4953</testSuiteGuid>
    <testCaseLink>
-      <guid>6ebf676b-2049-4098-a150-04cc51ae3b0a</guid>
+      <guid>ef605ef3-5cd9-4366-9a84-219c3e1794da</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Home_Page/ValidateHomePageManual</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Home_Page/Onboarding_NewPolicy</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>a4bfd1a3-a2ef-49d3-adf1-f5bb467e941f</guid>
+      <guid>a6e7fc5a-db88-47b6-82fb-49c840683e29</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Home_Page/ValidateHomePageManual</testCaseId>
+      <testCaseId>Test Cases/Home_Page/Applications</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>
