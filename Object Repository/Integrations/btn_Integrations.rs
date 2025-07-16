@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//nav[contains(@class,'menuGrp menuGrp1')]/descendant::a[last()-2]</value>
+         <value>//nav[contains(@class,'menuGrp menuGrp1')]/descendant::a[last()-3]</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

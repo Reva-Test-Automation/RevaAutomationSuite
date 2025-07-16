@@ -58,7 +58,7 @@ public class CreateApplication {
 			} else {
 				KeywordUtil.markFailed("Neither 'Start New Application' nor 'New Application' button was found.")
 				return
-			}
+			}				
 			TestObject nameField = findTestObject('Object Repository/Onboarding/Page_Reva.ai/application_Name')
 			WebUI.waitForElementVisible(nameField, 10)
 			WebUI.setText(nameField, appName)
@@ -75,7 +75,8 @@ public class CreateApplication {
 			TestObject continueBtn = findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue')
 			WebUI.verifyElementClickable(continueBtn)
 			WebUI.click(continueBtn)
-			KeywordUtil.logInfo("✅ Clicked Continue button.")
+			KeywordUtil.logInfo("✅ Clicked Continue button.")		
+			
 		} catch (Exception e) {
 			WebUI.comment("Error in fillApplicationDetails: " + e.getMessage())
 		}
@@ -142,6 +143,8 @@ public class CreateApplication {
 		TestObject dynamicButton = new TestObject().addProperty("xpath", ConditionType.EQUALS, policyConfigBtn)
 		WebUI.click(dynamicButton)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/popUp_DefineSchema'), 10)
+		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_DefineManually'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_AddPrincipal'), 10)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_AddPrincipal'))
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/container_Principal_1'), GlobalVariable.SchemaPrincipal_1)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_AddAction'))

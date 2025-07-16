@@ -6,12 +6,11 @@
    <elementGuidId>360eef42-18cc-4654-a7ec-aa343bf59330</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='editorlayoutlatest']/descendant::textarea[last()]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[@id='editorlayoutlatest']/descendant::textarea[last()]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

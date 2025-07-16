@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ValidateHomePageManual</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c64deff0-8a44-4517-85b9-02eed7f9cbc9</testCaseGuid>
+</TestCaseEntity>

@@ -15,14 +15,14 @@
       <guid>5b0108cd-d70a-416e-83c1-a65ab894c36d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Home_Page/Onboarding_ExistingPolicy</testCaseId>
+      <testCaseId>Test Cases/Onboarding_ExistingPolicy</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>d623e01c-e748-4c6c-80f1-0876a8487bb2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Home_Page/Applications</testCaseId>
+      <testCaseId>Test Cases/Applications</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

@@ -56,4 +56,20 @@ public class getScreenShotWithHighlight {
 			return null
 		}
 	}
+	
+	@Keyword
+	public static String takeHighlightedScreenshotWithOutIndex(WebElement element, String fileName) {
+		try {
+			String folderPath = getOrCreateScreenshotFolder()
+			WebUI.executeJavaScript("arguments[0].style.border='3px solid red'", Arrays.asList(element))
+			String screenshotPath = folderPath + "/" + fileName + "_"+ ".png"
+			WebUI.takeScreenshot(screenshotPath)
+			WebUI.comment("📸 Screenshot saved at: " + screenshotPath)
+			WebUI.executeJavaScript("arguments[0].style.border=''", Arrays.asList(element))
+			return screenshotPath
+		} catch (Exception e) {
+			WebUI.comment("❌ Failed to take highlighted screenshot: " + e.getMessage())
+			return null
+		}
+	}
 }

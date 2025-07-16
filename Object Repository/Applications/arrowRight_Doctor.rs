@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>arrowRight_Doctor</name>
+   <tag></tag>
+   <elementGuidId>4d2c3be1-fe0b-4b2e-94a6-a42af3bb5f6b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//p[text()='Doctor']/ancestor::div[@aria-describedby='react-flow__node-desc-1']/descendant::div[@data-handlepos='right']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+</WebElementEntity>

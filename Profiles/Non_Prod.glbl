@@ -116,7 +116,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'us-west-2'</initValue>
+      <initValue>'TestAutoPolicy'</initValue>
       <name>PolicySearchInput</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -198,5 +198,10 @@
       <description></description>
       <initValue>'true'</initValue>
       <name>ConditionGroupOneInput</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Condition is missing for policy+Policy \'Permit ALL to ALL on ALL.\' lacks conditions. Please define conditions for better security.'</initValue>
+      <name>WarningConditionMsg</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

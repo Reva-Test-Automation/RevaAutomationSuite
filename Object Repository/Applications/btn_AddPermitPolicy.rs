@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//p[text()='Add permit policy']/parent::div</value>
+         <value>//p[text()='Add permit policy']/parent::button</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

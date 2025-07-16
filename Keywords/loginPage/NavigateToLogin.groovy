@@ -21,8 +21,8 @@ import internal.GlobalVariable
 
 public class NavigateToLogin {
 	@Keyword
-	public void NavigateUrl() {
-		WebUI.navigateToUrl(GlobalVariable.App_Url)
+	public void NavigateUrl(String Url) {
+		WebUI.navigateToUrl(Url)
 	}
 
 	@Keyword
@@ -31,8 +31,7 @@ public class NavigateToLogin {
 		WebUI.setText(findTestObject('Login_Page/txt_UserName'), username)
 		WebUI.setText(findTestObject('Login_Page/txt_Password'), password)
 		WebUI.click(findTestObject('Login_Page/btn_LogIn'))
-		WebUI.comment('User logged in successfully with username: ' + username)
-		WebUI.waitForPageLoad(5)
+		WebUI.comment('User logged in successfully with username: ' + username)		
 		def skipButton = findTestObject('Object Repository/Login_Page/btn_Skip')
 		if (WebUI.verifyElementVisible(skipButton, FailureHandling.OPTIONAL)) {
 			WebUI.click(skipButton)

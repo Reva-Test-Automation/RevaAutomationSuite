@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[text()='Top Activity']/parent::span/parent::div/following-sibling::a</value>
+         <value>//a[text()='View more']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
