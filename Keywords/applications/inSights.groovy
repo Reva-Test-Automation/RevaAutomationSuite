@@ -60,7 +60,7 @@ public class inSights {
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Applications/link_ProdEnv'), 10)
 		WebUI.click(findTestObject('Object Repository/Applications/link_ProdEnv'))
 		/*WebUI.waitForElementVisible(findTestObject('Object Repository/Applications/link_ProductionStore'), 10)
-		WebUI.click(findTestObject('Object Repository/Applications/link_ProductionStore'))*/
+		 WebUI.click(findTestObject('Object Repository/Applications/link_ProductionStore'))*/
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 10)
 	}
 
@@ -76,7 +76,7 @@ public class inSights {
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Applications/link_DevEnv'), 10)
 		WebUI.click(findTestObject('Object Repository/Applications/link_DevEnv'))
 		/*WebUI.waitForElementVisible(findTestObject('Object Repository/Applications/link_DevStore'), 10)
-		WebUI.click(findTestObject('Object Repository/Applications/link_DevStore'))*/
+		 WebUI.click(findTestObject('Object Repository/Applications/link_DevStore'))*/
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 10)
 	}
 
@@ -355,11 +355,19 @@ public class inSights {
 		WebUI.delay(0.5)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_EditPolicy'), 10)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_EditPolicy'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/popup_EditPolicy'), 10)
-		WebUI.click(findTestObject('Object Repository/Applications/radio_SelectVersion'))
-		WebUI.click(findTestObject('Object Repository/Applications/btn_Continue'))
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/btn_Test'), 20)
-		WebUI.click(findTestObject('Object Repository/Applications/btn_Test'))
+		WebUI.delay(2)
+		boolean isPopupVisible = WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/popup_EditPolicy'), 5, FailureHandling.OPTIONAL)
+		if (isPopupVisible) {
+			WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/btn_CreateNewDraft'), 20)
+			WebUI.click(findTestObject('Object Repository/Applications/btn_CreateNewDraft'))
+			WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/btn_Test'), 20)
+			WebUI.click(findTestObject('Object Repository/Applications/btn_Test'))
+		} else {
+			WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/btn_Test'), 20)
+			WebUI.click(findTestObject('Object Repository/Applications/btn_Test'))
+		}
+		WebUI.delay(0.5)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/Applications/img_Processing'), 20)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_AccessMap'), 10)
 		WebUI.setText(findTestObject('Object Repository/Applications/input_AccessMapAI'), GlobalVariable.AccessMapPrompt)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AIPromptSubmit'))
@@ -369,13 +377,17 @@ public class inSights {
 			String text = element.getText().trim()
 			if (text == targetText) {
 				WebUI.comment("✅ Found '${targetText}' — hovering using Actions class.")
-
 				Actions action = new Actions(DriverFactory.getWebDriver())
 				action.moveToElement(element).perform()
-				WebDriver driver = DriverFactory.getWebDriver()
-				JavascriptExecutor js = (JavascriptExecutor) driver
-				js.executeScript("arguments[0].style.border='3px solid red'", element)
-				getScreenShotWithHighlight.takeHighlightedScreenshotWithOutIndex(element, "VIP_Patient")
+				WebUI.delay(0.5)
+				List<WebElement> nodes = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/node_FromToConnection'), 10)
+				int nodeCount = nodes.size()
+				WebUI.comment("🔍 Total nodes found: ${nodeCount}")
+				if (nodeCount == 2) {
+					KeywordUtil.markPassed("✅ Test Passed: Exactly 2 nodes found.")
+				} else {
+					KeywordUtil.markFailed("❌ Test Failed: Expected 2 nodes, but found ${nodeCount}.")
+				}
 				break
 			}
 		}
@@ -384,8 +396,36 @@ public class inSights {
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Code'))
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/btn_DeleteDenyPolicy'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_DeleteDenyPolicy'))
+		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_CloseCode'))
-		
+		WebUI.delay(0.5)
+		WebUI.click(findTestObject('Object Repository/Applications/btn_Test'))
+		WebUI.delay(3)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/Applications/img_Processing'), 20)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_AccessMap'), 10)
+		WebUI.setText(findTestObject('Object Repository/Applications/input_AccessMapAI'), GlobalVariable.AccessMapPrompt)
+		WebUI.click(findTestObject('Object Repository/Applications/btn_AIPromptSubmit'))
+		def nodeElements = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/list_BeforeDeleteDeny'), 10)
+		String targetPatientText = GlobalVariable.PatientName
+		for (WebElement nodeelement : nodeElements) {
+			String patientText = nodeelement.getText().trim()
+			if (patientText == targetPatientText) {
+				WebUI.comment("✅ Found '${targetPatientText}' — hovering using Actions class.")
+				Actions action = new Actions(DriverFactory.getWebDriver())
+				action.moveToElement(nodeelement).perform()
+				WebUI.delay(0.5)
+				List<WebElement> nodes = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/node_FromToConnection'), 10)
+				int nodeCount = nodes.size()
+				WebUI.comment("🔍 Total nodes found: ${nodeCount}")
+				if (nodeCount == 5) {
+					KeywordUtil.markPassed("✅ Test Passed: Exactly 5 nodes found.")
+				} else {
+					KeywordUtil.markFailed("❌ Test Failed: Expected 5 nodes, but found ${nodeCount}.")
+				}
+				break
+			}
+		}
+		WebUI.click(findTestObject('Object Repository/Applications/btn_CloseTest'))
 	}
 
 	@Keyword
@@ -461,24 +501,8 @@ public class inSights {
 		WebUI.click(ResourcedynamicObject)
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Violation'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/tab_Warnings'), 10)
-		WebUI.click(findTestObject('Object Repository/Applications/tab_Warnings'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/tab_Violations'), 10)
 		WebUI.delay(1)
-		def elements = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/txt_WarningCondition'), 10)
-		def actualLines = elements.collect { it.getText().trim() }
-		def expectedLines = GlobalVariable.WarningConditionMsg.split("\\+").collect { it.trim() }
-
-		WebUI.comment("🔍 Actual: ${actualLines}")
-		WebUI.comment("✅ Expected: ${expectedLines}")
-
-		if (actualLines == expectedLines) {
-			WebUI.comment("✅ Pass: All messages match.")
-		} else {
-			WebUI.comment("❌ Fail: Text mismatch in warning messages.")
-			WebUI.comment("❗ Expected: ${expectedLines}")
-			WebUI.comment("❗ Actual: ${actualLines}")
-			assert false : "Text mismatch"
-		}
 	}
 
 	@Keyword

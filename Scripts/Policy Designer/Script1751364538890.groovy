@@ -19,25 +19,23 @@ import org.openqa.selenium.Keys as Keys
        
 
 
-CustomKeywords.'commonFunctions.browserUtils.openBrowser'()
+	  CustomKeywords.'commonFunctions.browserUtils.openBrowser'()
+	
+	  CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'(GlobalVariable.App_Url)
+	
+	  CustomKeywords.'loginPage.NavigateToLogin.Login'(GlobalVariable.UserName, GlobalVariable.Password)
+	
+	  CustomKeywords.'applications.inSights.NavigateToProvidenceHospitalProd'()
+	  
+	  CustomKeywords.'applications.inSights.DesignAIPolicy'()	 
 
-CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'(GlobalVariable.App_Url)
-
-CustomKeywords.'loginPage.NavigateToLogin.Login'(GlobalVariable.UserName, GlobalVariable.Password)
-
-
-
-/*
- * CustomKeywords.'applications.inSights.NavigateToProvidenceHospitalProd'()
- * 
- * CustomKeywords.'applications.inSights.DesignAIPolicy'()
- */
-
-
-  CustomKeywords.'applications.inSights.NavigateToProvidenceHospitalDev'()
-  
-  CustomKeywords.'applications.inSights.EditPolicy'()
- 
+	  CustomKeywords.'applications.inSights.NavigateToProvidenceHospitalDev'()
+	  
+	  CustomKeywords.'applications.inSights.EditPolicy'()
+	  
+	  
+	  
+	 
 
 	 
 

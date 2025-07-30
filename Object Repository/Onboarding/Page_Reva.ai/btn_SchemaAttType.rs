@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[contains(@id,'menu-button')]</value>
+         <value> //span[text()='Attribute Type']/parent::button[contains(@id,'menu-button')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

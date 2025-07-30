@@ -33,10 +33,10 @@ public class NavigateToLogin {
 		WebUI.click(findTestObject('Login_Page/btn_LogIn'))
 		WebUI.comment('User logged in successfully with username: ' + username)		
 		def skipButton = findTestObject('Object Repository/Login_Page/btn_Skip')
-		if (WebUI.verifyElementVisible(skipButton, FailureHandling.OPTIONAL)) {
+		if (WebUI.waitForElementVisible(skipButton, 3, FailureHandling.OPTIONAL)) {
 			WebUI.click(skipButton)
 		} else {
-			WebUI.comment('Skip button not displayed, continuing...')
+			WebUI.comment('⏭️ Skip button not displayed, continuing...')
 		}
 	}
 }

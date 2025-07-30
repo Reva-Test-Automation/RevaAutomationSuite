@@ -58,7 +58,7 @@ public class CreateApplication {
 			} else {
 				KeywordUtil.markFailed("Neither 'Start New Application' nor 'New Application' button was found.")
 				return
-			}				
+			}
 			TestObject nameField = findTestObject('Object Repository/Onboarding/Page_Reva.ai/application_Name')
 			WebUI.waitForElementVisible(nameField, 10)
 			WebUI.setText(nameField, appName)
@@ -75,8 +75,7 @@ public class CreateApplication {
 			TestObject continueBtn = findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue')
 			WebUI.verifyElementClickable(continueBtn)
 			WebUI.click(continueBtn)
-			KeywordUtil.logInfo("✅ Clicked Continue button.")		
-			
+			KeywordUtil.logInfo("✅ Clicked Continue button.")
 		} catch (Exception e) {
 			WebUI.comment("Error in fillApplicationDetails: " + e.getMessage())
 		}

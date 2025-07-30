@@ -289,4 +289,59 @@
       <initValue>'Dulciana Ainger'</initValue>
       <name>PatientName</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'TestAutoGuardrails'</initValue>
+      <name>GuardrailName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'This is for testing the guardrail via automation.'</initValue>
+      <name>GuardrailDescription</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Policy'</initValue>
+      <name>GuardrailsType</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Enforce'</initValue>
+      <name>GuardrailsStatus</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Violation'</initValue>
+      <name>GuardrailsCategoriseAs</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Automation'</initValue>
+      <name>GuardrailCategory</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'\'Policy is using  \'ALL\'  for actions or resources. Specify exact permissions for least privilege. (Test Automation Validation)'</initValue>
+      <name>GuardrailErrorMessage</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'TestAutomationSchema'</initValue>
+      <name>SchemaName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Test Automation Schema Description'</initValue>
+      <name>SchemaDesc</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'TestAutomationLibraryName'</initValue>
+      <name>LibPolicyName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Test Automation Library Description'</initValue>
+      <name>LibPolicyDesc</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

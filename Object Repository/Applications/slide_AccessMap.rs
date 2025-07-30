@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[contains(@class,'chakra-slide')]</value>
+         <value>//div[contains(@class,'chakra-slide')]/descendant::div[contains(@class,'policygraph')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -19,18 +19,16 @@ import org.openqa.selenium.Keys as Keys
 
   
 		CustomKeywords.'commonFunctions.browserUtils.openBrowser'()
-		// Navigating to the base URL
+		
 		CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'(GlobalVariable.App_Url)
-		// User logging into the Reva
+	
 		CustomKeywords.'loginPage.NavigateToLogin.Login'(GlobalVariable.UserName, GlobalVariable.Password)
-		// Validating logged in User
+		
 		//CustomKeywords.'homePage.VerifyLoggedInUser.ValidateUserDetails'()
-		// Navigating to Application dashboard
+		
 		CustomKeywords.'applications.inSights.ValidateApplication'()
 		
-		CustomKeywords.'applications.inSights.verifyInsightsTab'()
-		
-		//CustomKeywords.'applications.inSights.DesignPolicyAll'("ALL", "ALL", "ALL")
+		CustomKeywords.'applications.inSights.verifyInsightsTab'()		
 		
 		CustomKeywords.'applications.inSights.DesignPolicy'(GlobalVariable.PrincipalOneType, GlobalVariable.PrincipalPDOne, GlobalVariable.ActionTypeOne, GlobalVariable.ResourceTypeOne, GlobalVariable.ResourceInput, GlobalVariable.ConditionGroupOneInput)
 		

@@ -20,29 +20,29 @@ import org.openqa.selenium.Keys as Keys
 
         String PolicyTitle = CustomKeywords.'onBoarding.CreateApplication.getRandomTitle'()
 
-        // <<< On Boarding > Create Application > New Policy >>>
+       
 		CustomKeywords.'commonFunctions.browserUtils.openBrowser'()
-        // <<< Navigating to the base URL >>>
+       
 		CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'(GlobalVariable.App_Url)		
-		// <<< User logging into the Reva >>>
+		
 		CustomKeywords.'loginPage.NavigateToLogin.Login'(GlobalVariable.UserName, GlobalVariable.Password)		
-		// Validating logged in User
+		
 		// CustomKeywords.'homePage.VerifyLoggedInUser.ValidateUserDetails'()		
-		// Creating Application > Basic Details
+		
 		CustomKeywords.'onBoarding.CreateApplication.FillApplicationDetails'(GlobalVariable.ApplicationName, GlobalVariable.AppCategory, GlobalVariable.ApplicationTags, GlobalVariable.AppOwner, GlobalVariable.AppDescription)		
-        // Creating Application > Create Environment & Create Policy 
+       
 		CustomKeywords.'onBoarding.CreateApplication.AddEnvironmentsWithNewPolicy'(GlobalVariable.EnvironmentName, GlobalVariable.PolicyDescription, GlobalVariable.ConnectionName, PolicyTitle)
-		// Create Policy > Design Schema
+		
         CustomKeywords.'onBoarding.CreateApplication.DesignSchema'(PolicyTitle)
-		// Create Policy > Define Attribute
+		
 		CustomKeywords.'onBoarding.CreateApplication.DefineAttribute'()
-		// Create Policy > Set Up Hierarchy
+		
 		CustomKeywords.'onBoarding.CreateApplication.SetUpHierarchy'(PolicyTitle)
-		// Creating Application > Adding Environment & Policy > Uploading Test Data
+		
 		CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('TestData_template', PolicyTitle)
-		// Creating Application > Adding Environment & Policy > Checking Application status
+		
 		CustomKeywords.'onBoarding.CreateApplication.CheckForTheApplicationStatus'()
-		// Creating Application > Adding Environment & Policy > Deleting Application
+		
 		//CustomKeywords.'onBoarding.CreateApplication.DeleteApplication'()
 		
 		//CustomKeywords.'commonFunctions.browserUtils.CloseBrowser'()
