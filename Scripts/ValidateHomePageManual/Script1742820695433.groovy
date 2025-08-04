@@ -25,5 +25,5 @@ CustomKeywords.'homePage.VerifyLoggedInUser.ValidateUserDetails'()
 
 CustomKeywords.'homePage.SideButtons.ValidateSideButtons'()
 
-WebUI.closeBrowser()
+//CustomKeywords.'commonFunctions.browserUtils.CloseBrowser'()
 

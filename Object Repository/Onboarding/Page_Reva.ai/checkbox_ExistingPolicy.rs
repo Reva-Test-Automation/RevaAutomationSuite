@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//input[@placeholder='Search']/ancestor::*[3]/following-sibling::div[last()-1]/div/div[1]/descendant::span[contains(@class,'checkbox')]</value>
+         <value>//label[contains(@class,'checkbox')]/descendant::span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

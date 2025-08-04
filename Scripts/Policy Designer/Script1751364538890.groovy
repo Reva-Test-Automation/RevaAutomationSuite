@@ -33,6 +33,8 @@ import org.openqa.selenium.Keys as Keys
 	  
 	  CustomKeywords.'applications.inSights.EditPolicy'()
 	  
+	  //CustomKeywords.'commonFunctions.browserUtils.CloseBrowser'()
+	  
 	  
 	  
 	 

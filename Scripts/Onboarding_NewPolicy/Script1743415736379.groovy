@@ -43,8 +43,18 @@ import org.openqa.selenium.Keys as Keys
 		
 		CustomKeywords.'onBoarding.CreateApplication.CheckForTheApplicationStatus'()
 		
-		//CustomKeywords.'onBoarding.CreateApplication.DeleteApplication'()
+		CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'(GlobalVariable.HomePageUrl)
+					
+		CustomKeywords.'applications.inSights.ValidateApplication'()
 		
-		//CustomKeywords.'commonFunctions.browserUtils.CloseBrowser'()
+		CustomKeywords.'applications.inSights.verifyInsightsTab'()
+		
+		CustomKeywords.'applications.inSights.DesignPolicy'(GlobalVariable.PrincipalOneType, GlobalVariable.PrincipalPDOne, GlobalVariable.ActionTypeOne, GlobalVariable.ResourceTypeOne, GlobalVariable.ResourceInput, GlobalVariable.ConditionGroupOneInput)
+					
+		CustomKeywords.'applications.inSights.ProvideApprovals'(GlobalVariable.TestUserName, GlobalVariable.TestUserPassword)
+		
+		CustomKeywords.'onBoarding.CreateApplication.DeleteApplication'()
+		
+		CustomKeywords.'commonFunctions.browserUtils.CloseBrowser'()
 
 

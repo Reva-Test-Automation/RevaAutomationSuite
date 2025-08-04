@@ -256,8 +256,7 @@ public class CreateApplication {
 	}
 
 	@Keyword
-	public void CheckForTheApplicationStatus() {
-		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))
+	public void CheckForTheApplicationStatus() {		
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), 10)
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), GlobalVariable.ApplicationName)
 		WebUI.delay(3)
@@ -277,22 +276,21 @@ public class CreateApplication {
 	}
 
 	@Keyword
-	public void AddEnvironmentsWithExistingPolicy(String environmentName, String policySearchInput, String policyTitle) {
+	public void AddEnvironmentsWithExistingPolicy(String environmentName, String policySearchInput) {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Environments'), 10)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Environments'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/create_Environment_Header'), 10)
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_EnvironmentName'), environmentName)
-		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_PolicySearch'), policySearchInput)
-		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/select_PolicySearchResultsFirstTitleEdit'))
-		WebUI.delay(1)
-		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_ExistingPolicyTitle'))
-		WebUI.delay(0.5)
-		WebUI.executeJavaScript("document.getElementById('policyStoreName').value = '';", null)
-		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_ExistingPolicyTitle'), policyTitle)
-		WebUI.delay(0.5)
-		WebElement element = WebUI.findWebElement(findTestObject('Object Repository/Onboarding/Page_Reva.ai/checkbox_ExistingPolicy'), 10)
-		JavascriptExecutor js = (JavascriptExecutor) DriverFactory.getWebDriver()
-		js.executeScript("arguments[0].click();", element)
+		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_PolicySearch'), policySearchInput)		
+		TestObject titleObject = findTestObject('Object Repository/Onboarding/Page_Reva.ai/title_PolicyStore')
+		TestObject checkboxObject = findTestObject('Object Repository/Onboarding/Page_Reva.ai/checkbox_ExistingPolicy')	
+		String actualText = WebUI.getText(titleObject).trim()
+		if (actualText == GlobalVariable.PolicySearchInput) {
+			WebUI.click(checkboxObject)
+			KeywordUtil.markPassed("✅ Clicked on checkbox because text matched: '${actualText}'")
+		} else {
+			KeywordUtil.markWarning("⚠️ Text did not match. Found: '${actualText}', Expected: '${GlobalVariable.PolicySearchInput}'")
+		}		
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Create_Env'))
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/popUpHeaderConfigure'), 10)
@@ -342,6 +340,12 @@ public class CreateApplication {
 
 	@Keyword
 	public void UploadTestData(String fileName,  String policyTitle) {
+		String policyUploadStatusXpath = "//a[text()='" + policyTitle + "']/parent::td/following-sibling::td[last()-1]/p"
+		TestObject policyUploadStatusText = new TestObject().addProperty("xpath", ConditionType.EQUALS, policyUploadStatusXpath)
+		String status = WebUI.getText(policyUploadStatusText).trim()
+		if (status == "Success") {
+			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))
+		} else {
 		String dynamicXPath = "//a[text()='" + policyTitle + "']/parent::td/following-sibling::td[last()]/descendant::button"
 		TestObject dynamicButton = new TestObject().addProperty("xpath", ConditionType.EQUALS, dynamicXPath)
 		if (WebUI.waitForElementClickable(dynamicButton, 10)) {
@@ -364,10 +368,15 @@ public class CreateApplication {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Confirm'))
 		CheckForTheTestDataUploadStatus(policyTitle)
+		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))
+		}
 	}
 
 	@Keyword
 	public void DeleteApplication() {
+		TestObject onboardingBtn = findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Onboarding')
+		WebUI.verifyElementClickable(onboardingBtn)
+		WebUI.click(onboardingBtn)		
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), 10)
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), GlobalVariable.ApplicationName)
 		WebUI.delay(3)

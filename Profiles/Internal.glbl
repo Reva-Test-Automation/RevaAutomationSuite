@@ -126,7 +126,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'TestAutoPolicy'</initValue>
+      <initValue>'TestAutomationPolicyStore'</initValue>
       <name>PolicySearchInput</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -343,5 +343,20 @@
       <description></description>
       <initValue>'Test Automation Library Description'</initValue>
       <name>LibPolicyDesc</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'CreateList, CreateTask'</initValue>
+      <name>ActionMultiText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'TestAutomationEntity'</initValue>
+      <name>EntityName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Test Automation Entity Description'</initValue>
+      <name>EntityDesc</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

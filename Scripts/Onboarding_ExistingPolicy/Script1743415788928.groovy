@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-        String PolicyTitle = CustomKeywords.'onBoarding.CreateApplication.getRandomTitle'()
+        
 
        
 		CustomKeywords.'commonFunctions.browserUtils.openBrowser'()
@@ -30,11 +30,11 @@ import org.openqa.selenium.Keys as Keys
 		
 		CustomKeywords.'onBoarding.CreateApplication.FillApplicationDetails'(GlobalVariable.ApplicationName, GlobalVariable.AppCategory, GlobalVariable.ApplicationTags, GlobalVariable.AppOwner, GlobalVariable.AppDescription)		
 		
-		CustomKeywords.'onBoarding.CreateApplication.AddEnvironmentsWithExistingPolicy'(GlobalVariable.EnvironmentName, GlobalVariable.PolicySearchInput, PolicyTitle)
+		CustomKeywords.'onBoarding.CreateApplication.AddEnvironmentsWithExistingPolicy'(GlobalVariable.EnvironmentName, GlobalVariable.PolicySearchInput)
 		
-		CustomKeywords.'onBoarding.CreateApplication.UploadSchemaJson'(GlobalVariable.SchemaJson, PolicyTitle)
+		CustomKeywords.'onBoarding.CreateApplication.UploadSchemaJson'(GlobalVariable.SchemaJson, GlobalVariable.PolicySearchInput)
 		
-		CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('RevaEntityData', PolicyTitle)
+		CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('Reva-EntityData-DemoAppv2', GlobalVariable.PolicySearchInput)
 		
 		CustomKeywords.'onBoarding.CreateApplication.CheckForTheApplicationStatus'()
 		

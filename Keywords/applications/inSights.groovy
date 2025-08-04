@@ -34,6 +34,7 @@ public class inSights {
 
 	@Keyword
 	public void ValidateApplication() {
+		WebUI.refresh()
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Applications'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Applications'), 10)
 		WebUI.click(findTestObject('Object Repository/Applications/link_Automation'))

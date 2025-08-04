@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[text()='Environment']</value>
+         <value>//button[text()='Environments']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
