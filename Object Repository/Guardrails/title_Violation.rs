@@ -6,12 +6,11 @@
    <elementGuidId>049489b5-fb1d-4eaa-a6a0-653d1fca8996</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[contains(@id,'tabpanel-0')]/descendant::button[contains(@id,'accordion-button')]/descendant::p[last()-3]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[contains(@id,'tabpanel-0')]/descendant::button[contains(@id,'accordion-button')]/descendant::p[last()-1]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

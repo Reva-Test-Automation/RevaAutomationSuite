@@ -27,16 +27,31 @@ public class NavigateToLogin {
 
 	@Keyword
 	public void Login(String username, String password) {
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/Login_Page/btn_SignInUserName'), 10)
+		//WebUI.click(findTestObject('Object Repository/Login_Page/btn_SignInUserName'))
+		def SignInButton = findTestObject('Object Repository/Login_Page/btn_SignInUserName')
+		if (WebUI.waitForElementVisible(SignInButton, 3, FailureHandling.OPTIONAL)) {
+			WebUI.click(SignInButton)
+		} else {
+			WebUI.comment('⏭️ Sign in button not displayed, continuing...')
+		}
 		WebUI.waitForElementVisible(findTestObject('Login_Page/txt_UserName'), 10)
 		WebUI.setText(findTestObject('Login_Page/txt_UserName'), username)
 		WebUI.setText(findTestObject('Login_Page/txt_Password'), password)
 		WebUI.click(findTestObject('Login_Page/btn_LogIn'))
-		WebUI.comment('User logged in successfully with username: ' + username)		
+		WebUI.comment('User logged in successfully with username: ' + username)
 		def skipButton = findTestObject('Object Repository/Login_Page/btn_Skip')
 		if (WebUI.waitForElementVisible(skipButton, 3, FailureHandling.OPTIONAL)) {
 			WebUI.click(skipButton)
 		} else {
 			WebUI.comment('⏭️ Skip button not displayed, continuing...')
 		}
+	}
+
+	@Keyword
+	public void LogOut() {
+		WebUI.click(findTestObject('Object Repository/Home_Page/button_UserLogOut'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Home_Page/frame_LogOutPopup'), 10)
+		WebUI.click(findTestObject('Object Repository/Home_Page/menu_LogOut'))
 	}
 }

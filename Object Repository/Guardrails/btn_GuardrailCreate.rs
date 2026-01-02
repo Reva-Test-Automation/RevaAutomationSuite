@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[contains(@class,'modal__body')]/descendant::button[text()='Create']</value>
+         <value>//div[contains(@class,'modal__body')]/descendant::button[text()='Update']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

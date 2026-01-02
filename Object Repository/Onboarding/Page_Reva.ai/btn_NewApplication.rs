@@ -6,12 +6,11 @@
    <elementGuidId>6f8d7c12-54d1-40b0-b5a6-f761016dcebd</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//button[text()='New Application']</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[text()='Create']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

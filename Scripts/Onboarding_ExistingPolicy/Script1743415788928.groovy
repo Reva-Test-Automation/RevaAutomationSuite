@@ -16,9 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
-        
-
+    
        
 		CustomKeywords.'commonFunctions.browserUtils.openBrowser'()
 		
@@ -30,15 +28,23 @@ import org.openqa.selenium.Keys as Keys
 		
 		CustomKeywords.'onBoarding.CreateApplication.FillApplicationDetails'(GlobalVariable.ApplicationName, GlobalVariable.AppCategory, GlobalVariable.ApplicationTags, GlobalVariable.AppOwner, GlobalVariable.AppDescription)		
 		
-		CustomKeywords.'onBoarding.CreateApplication.AddEnvironmentsWithExistingPolicy'(GlobalVariable.EnvironmentName, GlobalVariable.PolicySearchInput)
+		CustomKeywords.'onBoarding.CreateApplication.UploadHospitalSchemaJson'('hospital-schemav2')
 		
-		CustomKeywords.'onBoarding.CreateApplication.UploadSchemaJson'(GlobalVariable.SchemaJson, GlobalVariable.PolicySearchInput)
+		CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('Reva-EntityData-DemoAppv2')
 		
-		CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('Reva-EntityData-DemoAppv2', GlobalVariable.PolicySearchInput)
+		CustomKeywords.'applications.inSights.ValidateApplication'()
 		
-		CustomKeywords.'onBoarding.CreateApplication.CheckForTheApplicationStatus'()
+		CustomKeywords.'applications.inSights.DesignAIPolicy'()
 		
-		//CustomKeywords.'onBoarding.CreateApplication.DeleteApplication'()
+		CustomKeywords.'applications.inSights.ProvideApprovals'(GlobalVariable.TestUserName, GlobalVariable.TestUserPassword)
+		
+		//CustomKeywords.'onBoarding.CreateApplication.AddEnvironmentsWithExistingPolicy'(GlobalVariable.EnvironmentName)
+		
+		//CustomKeywords.'onBoarding.CreateApplication.UploadSchemaJson'(GlobalVariable.SchemaJson, GlobalVariable.PolicySearchInput)
+					
+		//CustomKeywords.'onBoarding.CreateApplication.CheckForTheApplicationStatus'()
+		
+		CustomKeywords.'onBoarding.CreateApplication.DeleteApplication'()
 		
 		//CustomKeywords.'commonFunctions.browserUtils.CloseBrowser'()
 		

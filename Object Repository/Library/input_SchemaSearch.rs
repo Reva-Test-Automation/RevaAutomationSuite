@@ -6,12 +6,11 @@
    <elementGuidId>f933b3b1-93a8-4793-bb8f-d20534d4eb07</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//input[@placeholder='Search']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[contains(@class,'tab-panels')]/descendant::input[@placeholder='Search'][last()]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

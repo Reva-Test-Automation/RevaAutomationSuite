@@ -6,12 +6,11 @@
    <elementGuidId>051d3c51-dd91-40fd-938f-2218f1af3935</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//footer[contains(@class,'chakra-modal__footer')]/descendant::button[text()='Create']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//button[text()='Create']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

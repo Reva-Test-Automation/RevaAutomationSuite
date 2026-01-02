@@ -6,12 +6,11 @@
    <elementGuidId>3d709ffd-57ee-469b-8cfc-64bcae47033a</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//nav[contains(@class,'menuGrp menuGrp1')]/descendant::a[last()-2]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

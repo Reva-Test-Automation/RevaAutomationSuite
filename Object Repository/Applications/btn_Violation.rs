@@ -6,11 +6,11 @@
    <elementGuidId>5ba5df66-38f2-434b-a46d-5c56dcbab9f1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//button[@aria-label='Add Library']/parent::div/preceding-sibling::div/button</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//button[@aria-label='Recommendation']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

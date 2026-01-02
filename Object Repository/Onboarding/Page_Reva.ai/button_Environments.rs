@@ -6,11 +6,11 @@
    <elementGuidId>80f36cab-a28f-42d1-9419-6b5180f82882</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//button[text()='Environment']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//button[text()='Environments']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

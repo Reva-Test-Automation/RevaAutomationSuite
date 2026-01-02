@@ -8,355 +8,665 @@
       <description></description>
       <initValue>'https://internal.preview.reva.ai/home'</initValue>
       <name>App_Url</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'https://internal.preview.reva.ai/approvals'</initValue>
       <name>ApprovalUrl</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://internal.preview.reva.ai/home'</initValue>
-      <name>HomePageUrl</name>
+      <initValue>'https://internal.preview.reva.ai'</initValue>
+      <name>origin</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://api.preview.reva.ai'</initValue>
+      <name>baseUrl</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'david'</initValue>
       <name>UserName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'vocdiz-vibwi7-memNux'</initValue>
       <name>Password</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'john'</initValue>
       <name>TestUserName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'jorseh-zoqzId-4hywvi'</initValue>
       <name>TestUserPassword</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'john'</initValue>
       <name>AppOwner</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Welcome'</initValue>
       <name>LoggedIn_UserText</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'TestAutoAppName'</initValue>
+      <initValue>'TestAutoAppName-1'</initValue>
       <name>ApplicationName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Automation'</initValue>
       <name>AppCategory</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Consulting'</initValue>
       <name>ApplicationTags</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'This is for testing the app via automation'</initValue>
       <name>AppDescription</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'TestAutoEnv'</initValue>
       <name>EnvironmentName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'TestAutoPolicy'</initValue>
       <name>PolicyDisplayName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'This is for testing the create policy via automation'</initValue>
       <name>PolicyDescription</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'TestAutomation_Integration'</initValue>
       <name>ConnectionName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'User'</initValue>
       <name>SchemaPrincipal_1</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'CreateList'</initValue>
       <name>SchemaAction_1</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Application'</initValue>
       <name>SchemaResource_1</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'CreateTask'</initValue>
       <name>SchemaAction_2</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'DeleteList'</initValue>
       <name>SchemaAction_3</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Role'</initValue>
       <name>SchemaAttName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Manager'</initValue>
       <name>SchemaAttValue</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'TestAutomationPolicyStore'</initValue>
       <name>PolicySearchInput</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'AWS'</initValue>
       <name>IntegrationType</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'TestAutomation_Integration'</initValue>
       <name>IntegrationName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'732029699072'</initValue>
       <name>AWSAccountNumber</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'This is for testing the integration via automation'</initValue>
       <name>Integration_Desc</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'US East (N. Virginia)'</initValue>
       <name>AWSRegion</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Warnings,Errors,Violations'</initValue>
       <name>InsightsTabs</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'permit (\r\n    principal,\r\n    action == RevaHospital::Action::&quot;setBudget&quot;,\r\n    resource\r\n) \r\nwhen { principal.salary > 750 } ;'</initValue>
       <name>PolicyCodePermitAll</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'permit (\r\n    principal,\r\n    action,\r\n    resource\r\n) \r\nwhen {     (resource == principal) || (resource has supervisor &amp;&amp; principal == resource.supervisor) || (resource has patient &amp;&amp; resource.patient.doctor == principal) };'</initValue>
       <name>PolicyCodePermitStaff</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Pending Approval'</initValue>
       <name>PolicyBeforeApprovalStatus</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Active'</initValue>
       <name>PolicyAfterApprovalStatus</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Manager'</initValue>
       <name>PrincipalPDOne</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'User'</initValue>
       <name>PrincipalOneType</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'CreateTask'</initValue>
       <name>ActionTypeOne</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Application'</initValue>
       <name>ResourceTypeOne</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Reva.ai'</initValue>
       <name>ResourceInput</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'true'</initValue>
       <name>ConditionGroupOneInput</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'TestAutomationUserOne'</initValue>
       <name>TestUserOne</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'TestAutomationUserTwo'</initValue>
       <name>TestUserTwo</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Phone Number'</initValue>
       <name>CreateUserAttName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Test Automation'</initValue>
       <name>CreateUserFirstName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'User One'</initValue>
       <name>CreateUserLastName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'testautomation.userone@reva.ai'</initValue>
       <name>CreateUserEmail</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'9849098490'</initValue>
       <name>CreateUserAttValue</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'TestAutomation'</initValue>
       <name>GroupName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'This group is for test automation'</initValue>
       <name>GroupDesc</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Create a policy so that Doctor can discharge patient only if they are of same department as of assigned doctor of patient.'</initValue>
       <name>DoctorAIPrompt</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Nurse&lt;resource> has supervisor'</initValue>
       <name>DenyPolicy</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Doctor&lt;principal> eq Nurse&lt;resource>.supervisor'</initValue>
       <name>DenyPolicySec</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'permit ( principal , action  == RevaHospital::Action::&quot;setBudget&quot;,resource  )  when { principal.salary  >  750  };'</initValue>
       <name>TextAreaBudget</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Prevent Overly Permissive Policies'</initValue>
       <name>ViolationsPoliciesALL</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Which doctors can discharge patient of Oncology department'</initValue>
       <name>AccessMapPrompt</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Dulciana Ainger'</initValue>
       <name>PatientName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'TestAutoGuardrails'</initValue>
       <name>GuardrailName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'This is for testing the guardrail via automation.'</initValue>
       <name>GuardrailDescription</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Policy'</initValue>
       <name>GuardrailsType</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Enforce'</initValue>
       <name>GuardrailsStatus</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Violation'</initValue>
       <name>GuardrailsCategoriseAs</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Automation'</initValue>
       <name>GuardrailCategory</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'\'Policy is using  \'ALL\'  for actions or resources. Specify exact permissions for least privilege. (Test Automation Validation)'</initValue>
       <name>GuardrailErrorMessage</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'TestAutomationSchema'</initValue>
       <name>SchemaName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Test Automation Schema Description'</initValue>
       <name>SchemaDesc</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'TestAutomationLibraryName'</initValue>
       <name>LibPolicyName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Test Automation Library Description'</initValue>
       <name>LibPolicyDesc</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'CreateList, CreateTask'</initValue>
+      <initValue>'CreateList, DeleteList'</initValue>
       <name>ActionMultiText</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'TestAutomationEntity'</initValue>
       <name>EntityName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Test Automation Entity Description'</initValue>
       <name>EntityDesc</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Company'</initValue>
+      <name>EntityAttName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Reva.ai'</initValue>
+      <name>EntityAttValue</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Dulciana Ainger,Nata Coathup,dischargePatient,Tally Raftery,Weston Jump'</initValue>
+      <name>ImpactList</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'HospitalPolicyForAutomation'</initValue>
+      <name>LibHospitalPolicy</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'AppPolicies'</initValue>
+      <name>SearchPolicy</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'test_Viewer'</initValue>
+      <name>TestUserView</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'test_AppAdmin'</initValue>
+      <name>TestUserAdmin</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Reva@1234567891234'</initValue>
+      <name>TestUserPass</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Git_Connection'</initValue>
+      <name>GitConnectionName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'testUserCollaborator'</initValue>
+      <name>TestUserCollaborator</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'testUserSystemAdmin'</initValue>
+      <name>SystemAdmin</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'AutomationCategory'</initValue>
+      <name>CategoryName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'David Miller'</initValue>
+      <name>CategoryOwner</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'get details of auditLogId Auto-001'</initValue>
+      <name>AEPromptOne</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'show me access of Doctor Ailey Pakeman in application Test_Automation_App env Default'</initValue>
+      <name>AEPromptTwo</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'eyJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..h5d0vnuzbiFaAAtz.58-UcFbLa2MDvpo4Mq4uYKHAXcgZTWKT-6FdH5IQ2QKF0ZuZUdwI9oUD7VhhX1vIbkdo1xZtK6XRM1CB3lFFkqm2SXH5rbEDwRlqwu-4wakdXf826mriN6sBhchpfmbNcElihGs4w4201Q0I0T-EE-D7-oqU2p3DAwnwet9skLIiQ4IPPCHtxBTfdE_jgPxjGDNQUBYb83Q_d0hwXOLIKuCdtpmn0f58PCfUaqEAUfGebdhAEjTDBJ0o08xtV3viWNU.vCEUOkqYJIEoDGZHLnbNkQ'</initValue>
+      <name>GetToken</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'86b1f9b4-87fa-4a0f-a87e-c8afa2d7656a'</initValue>
+      <name>EntityTypeId</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Automation-001'</initValue>
+      <name>EntityID</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>PDP_GetToken</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'show me all doctors from oncology department from Providence-Hospital from prod environment'</initValue>
+      <name>AEPromptDoc</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Oncology Department at Providence-Hospital'</initValue>
+      <name>AE_Doctors_Respo</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Nata Coathup'</initValue>
+      <name>AEViewDoctor</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'prescribeMedication,Providence-Hospital,dischargePatient,setSalary,getPatientRecord,getStaffDetails,performTest,setBudget,editPatientRecord,commentPatientRecord,Nata Coathup'</initValue>
+      <name>AEAccessMapValues</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

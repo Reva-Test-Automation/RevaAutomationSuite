@@ -6,12 +6,11 @@
    <elementGuidId>dc87e333-4c9c-4a4d-959e-4e7d9595a423</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//button[text()='Impact']/parent::div/following-sibling::div/button[text()='Publish']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//button[text()='Publish']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

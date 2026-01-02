@@ -1,0 +1,240 @@
+{
+  "RevaHospital": {
+    "actions": {
+      "assignPatient": {
+        "appliesTo": {
+          "principalTypes": ["Doctor"],
+          "resourceTypes": ["Doctor"]
+        },
+        "memberOf": [],
+        "admin": false
+      },
+      "commentPatientRecord": {
+        "appliesTo": {
+          "principalTypes": ["Doctor", "Nurse"],
+          "resourceTypes": ["Record"]
+        },
+        "memberOf": [],
+        "admin": false
+      },
+      "dischargePatient": {
+        "appliesTo": {
+          "principalTypes": ["Doctor"],
+          "resourceTypes": ["Patient"]
+        },
+        "memberOf": [],
+        "admin": false
+      },
+      "editPatientRecord": {
+        "appliesTo": {
+          "principalTypes": ["Doctor", "Nurse"],
+          "resourceTypes": ["Record"]
+        },
+        "memberOf": [],
+        "admin": false
+      },
+      "getPatientRecord": {
+        "appliesTo": {
+          "principalTypes": ["Doctor", "Nurse"],
+          "resourceTypes": ["Record"]
+        },
+        "memberOf": [],
+        "admin": false
+      },
+      "getSalary": {
+        "appliesTo": {
+          "principalTypes": ["Doctor", "Nurse"],
+          "resourceTypes": ["Doctor", "Nurse"]
+        },
+        "memberOf": [],
+        "admin": false
+      },
+      "getStaffDetails": {
+        "appliesTo": {
+          "principalTypes": ["Doctor", "Nurse"],
+          "resourceTypes": ["Doctor", "Nurse"]
+        },
+        "memberOf": [],
+        "admin": false
+      },
+      "performTest": {
+        "appliesTo": {
+          "principalTypes": ["Doctor"],
+          "resourceTypes": ["MedicalEquipment"]
+        },
+        "memberOf": [],
+        "admin": false
+      },
+      "prescribeMedication": {
+        "appliesTo": {
+          "principalTypes": ["Doctor"],
+          "resourceTypes": ["Medication"]
+        },
+        "memberOf": [],
+        "admin": false
+      },
+      "setBudget": {
+        "appliesTo": {
+          "principalTypes": ["Doctor"],
+          "resourceTypes": ["Department"]
+        },
+        "memberOf": [],
+        "admin": false
+      },
+      "setSalary": {
+        "appliesTo": {
+          "principalTypes": ["Doctor", "Nurse"],
+          "resourceTypes": ["Doctor", "Nurse"]
+        },
+        "memberOf": [],
+        "admin": false
+      }
+    },
+    "entityTypes": {
+      "Department": {
+        "shape": {
+          "attributes": {
+            "budget": {
+              "type": "Long",
+              "required": true,
+              "displayName": false
+            },
+            "head": {
+              "type": "Entity",
+              "name": "Doctor",
+              "required": true,
+              "displayName": false
+            }
+          },
+          "type": "Record"
+        }
+      },
+      "Disease": {
+        "shape": { "attributes": {}, "type": "Record" },
+        "memberOfTypes": ["DiseaseSeverity"]
+      },
+      "DiseaseSeverity": { "shape": { "attributes": {}, "type": "Record" } },
+      "Doctor": {
+        "shape": {
+          "attributes": {
+            "department": {
+              "type": "Entity",
+              "name": "Department",
+              "required": true,
+              "displayName": false
+            },
+            "salary": {
+              "type": "Long",
+              "required": true,
+              "displayName": false
+            },
+            "supervisor": {
+              "type": "Entity",
+              "name": "Doctor",
+              "required": false,
+              "displayName": false
+            }
+          },
+          "type": "Record"
+        },
+        "memberOfTypes": ["Staff"]
+      },
+      "MedicalEquipment": {
+        "shape": {
+          "attributes": {
+            "cost": { "type": "Long", "required": true, "displayName": false },
+            "department": {
+              "type": "Entity",
+              "name": "Department",
+              "required": true,
+              "displayName": false
+            }
+          },
+          "type": "Record"
+        }
+      },
+      "Medication": {
+        "shape": {
+          "attributes": {
+            "cost": { "type": "Long", "required": true, "displayName": false },
+            "treats": {
+              "type": "Entity",
+              "name": "Disease",
+              "required": true,
+              "displayName": false
+            }
+          },
+          "type": "Record"
+        },
+        "memberOfTypes": ["MedicationType"]
+      },
+      "MedicationType": { "shape": { "attributes": {}, "type": "Record" } },
+      "Nurse": {
+        "shape": {
+          "attributes": {
+            "department": {
+              "type": "Entity",
+              "name": "Department",
+              "required": true,
+              "displayName": false
+            },
+            "salary": {
+              "type": "Long",
+              "required": true,
+              "displayName": false
+            },
+            "supervisor": {
+              "type": "Entity",
+              "name": "Doctor",
+              "required": false,
+              "displayName": false
+            }
+          },
+          "type": "Record"
+        },
+        "memberOfTypes": ["Staff"]
+      },
+      "Patient": {
+        "shape": {
+          "attributes": {
+            "doctor": {
+              "type": "Entity",
+              "name": "Doctor",
+              "required": true,
+              "displayName": false
+            },
+            "illness": {
+              "type": "Entity",
+              "name": "Disease",
+              "required": true,
+              "displayName": false
+            },
+            "vip": {
+              "type": "String",
+              "possibleValues": ["true", "false"],
+              "required": true,
+              "displayName": false
+            }
+          },
+          "type": "Record"
+        },
+        "memberOfTypes": ["PatientType"]
+      },
+      "PatientType": { "shape": { "attributes": {}, "type": "Record" } },
+      "Record": {
+        "shape": {
+          "attributes": {
+            "patient": {
+              "type": "Entity",
+              "name": "Patient",
+              "required": true,
+              "displayName": false
+            }
+          },
+          "type": "Record"
+        }
+      },
+      "Staff": { "shape": { "attributes": {}, "type": "Record" } }
+    }
+  }
+}

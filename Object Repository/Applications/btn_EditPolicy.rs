@@ -6,12 +6,11 @@
    <elementGuidId>aafe5fef-2ef8-42cf-b9f9-995535268c31</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//button[text()='Access Map']/parent::div/following-sibling::div/descendant::button</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//button[text()='Access Map']/parent::div/following-sibling::div[last()-1]/descendant::button</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

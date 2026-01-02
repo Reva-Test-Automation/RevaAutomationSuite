@@ -25,34 +25,32 @@ String policyTitle = CustomKeywords.'onBoarding.CreateApplication.getRandomTitle
 	
 	  CustomKeywords.'loginPage.NavigateToLogin.Login'(GlobalVariable.UserName, GlobalVariable.Password)
 	  
-	  CustomKeywords.'guardrails.Guardrails.CreateGuardrail'()
+	 CustomKeywords.'settings.CategoryManagement.CreateCategory'(GlobalVariable.CategoryName)
+	  
+	  CustomKeywords.'guardrails.Guardrails.ValidateCategoryInGuardrailBeforeAppAssigning'()	  
   
-      CustomKeywords.'onBoarding.CreateApplication.FillApplicationDetails'(
-	  GlobalVariable.ApplicationName, GlobalVariable.AppCategory,
-	  GlobalVariable.ApplicationTags, GlobalVariable.AppOwner,
-	  GlobalVariable.AppDescription)
-	  
-	  CustomKeywords.'onBoarding.CreateApplication.AddEnvironmentsWithNewPolicy'(
-	  GlobalVariable.EnvironmentName, GlobalVariable.PolicyDescription,
-	  GlobalVariable.ConnectionName, policyTitle)
-	  
-	  CustomKeywords.'onBoarding.CreateApplication.DesignSchema'(policyTitle)
+      CustomKeywords.'onBoarding.CreateApplication.FillApplicationDetails'(GlobalVariable.ApplicationName, GlobalVariable.CategoryName, GlobalVariable.ApplicationTags, GlobalVariable.UserName, GlobalVariable.AppDescription)	  
+	 	  	  
+	  CustomKeywords.'onBoarding.CreateApplication.DesignSchema'()
 	  
 	  CustomKeywords.'onBoarding.CreateApplication.DefineAttribute'()
 	  
-	  CustomKeywords.'onBoarding.CreateApplication.SetUpHierarchy'(policyTitle)
+	  CustomKeywords.'onBoarding.CreateApplication.SetUpHierarchy'()
 	  
-	  CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('TestData_template', policyTitle)
+	  CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('TestData_template')
 	  
-	  CustomKeywords.'onBoarding.CreateApplication.CheckForTheApplicationStatus'()
-  
+	  CustomKeywords.'guardrails.Guardrails.CreateGuardrail'()
+	  
 	  CustomKeywords.'applications.inSights.ValidateApplication'()
 	  
 	  CustomKeywords.'applications.inSights.DesignPolicyAll'("ALL", "ALL", "ALL")
 	  
 	  CustomKeywords.'guardrails.Guardrails.ValidateGuardrail'()
 	  
+	  CustomKeywords.'guardrails.Guardrails.ValidateCategoryInGuardrailAfterAppAssigning'()
+	  
 	  CustomKeywords.'guardrails.Guardrails.DeleteGuardrail'()
 	  
 	  CustomKeywords.'onBoarding.CreateApplication.DeleteApplication'()
 	  
+	  CustomKeywords.'settings.CategoryManagement.DeleteCategory'(GlobalVariable.CategoryName)

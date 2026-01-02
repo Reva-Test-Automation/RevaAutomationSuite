@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//label[text()='Choose Integration']/following-sibling::div/descendant::input</value>
+         <value>//div[text()='Select Policy Type']/following-sibling::div/descendant::input</value>
       </entry>
       <entry>
          <key>BASIC</key>

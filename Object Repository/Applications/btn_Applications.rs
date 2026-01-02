@@ -6,11 +6,11 @@
    <elementGuidId>260953c4-9f32-474e-a33c-f39525c3f77c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//nav[contains(@class,'menuGrp menuGrp1')]/descendant::a[last()-4]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//nav[contains(@class,'menuGrp menuGrp1')]/descendant::a[last()-4]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

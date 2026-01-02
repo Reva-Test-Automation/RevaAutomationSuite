@@ -6,12 +6,11 @@
    <elementGuidId>b5091ba7-1bad-44cd-9436-68c2a8aeba22</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[@role='group']/descendant::div[contains(@class,'chakra-stack')]/descendant::div[last()]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//button[@aria-label='back']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

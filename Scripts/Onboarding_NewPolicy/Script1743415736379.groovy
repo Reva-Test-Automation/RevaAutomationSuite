@@ -18,8 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-        String PolicyTitle = CustomKeywords.'onBoarding.CreateApplication.getRandomTitle'()
-
+        //String PolicyTitle = CustomKeywords.'onBoarding.CreateApplication.getRandomTitle'()
        
 		CustomKeywords.'commonFunctions.browserUtils.openBrowser'()
        
@@ -27,34 +26,40 @@ import org.openqa.selenium.Keys as Keys
 		
 		CustomKeywords.'loginPage.NavigateToLogin.Login'(GlobalVariable.UserName, GlobalVariable.Password)		
 		
-		// CustomKeywords.'homePage.VerifyLoggedInUser.ValidateUserDetails'()		
+		//CustomKeywords.'homePage.VerifyLoggedInUser.ValidateUserDetails'()		
 		
-		CustomKeywords.'onBoarding.CreateApplication.FillApplicationDetails'(GlobalVariable.ApplicationName, GlobalVariable.AppCategory, GlobalVariable.ApplicationTags, GlobalVariable.AppOwner, GlobalVariable.AppDescription)		
-       
-		CustomKeywords.'onBoarding.CreateApplication.AddEnvironmentsWithNewPolicy'(GlobalVariable.EnvironmentName, GlobalVariable.PolicyDescription, GlobalVariable.ConnectionName, PolicyTitle)
+		CustomKeywords.'onBoarding.CreateApplication.FillApplicationDetails'(GlobalVariable.ApplicationName, GlobalVariable.AppCategory, GlobalVariable.ApplicationTags, GlobalVariable.TestUserName, GlobalVariable.AppDescription)		
+       		  
+		CustomKeywords.'onBoarding.CreateApplication.DesignSchema'()
 		
-        CustomKeywords.'onBoarding.CreateApplication.DesignSchema'(PolicyTitle)
+		CustomKeywords.'onBoarding.CreateApplication.captureNetworkLogs'()
 		
 		CustomKeywords.'onBoarding.CreateApplication.DefineAttribute'()
+	  
+		CustomKeywords.'onBoarding.CreateApplication.SetUpHierarchy'()
 		
-		CustomKeywords.'onBoarding.CreateApplication.SetUpHierarchy'(PolicyTitle)
+		CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('TestData_template')
+	  
+		//CustomKeywords.'onBoarding.CreateApplication.CheckForTheApplicationStatus'()	  
 		
-		CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('TestData_template', PolicyTitle)
-		
-		CustomKeywords.'onBoarding.CreateApplication.CheckForTheApplicationStatus'()
-		
-		CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'(GlobalVariable.HomePageUrl)
-					
-		CustomKeywords.'applications.inSights.ValidateApplication'()
-		
-		CustomKeywords.'applications.inSights.verifyInsightsTab'()
-		
-		CustomKeywords.'applications.inSights.DesignPolicy'(GlobalVariable.PrincipalOneType, GlobalVariable.PrincipalPDOne, GlobalVariable.ActionTypeOne, GlobalVariable.ResourceTypeOne, GlobalVariable.ResourceInput, GlobalVariable.ConditionGroupOneInput)
-					
-		CustomKeywords.'applications.inSights.ProvideApprovals'(GlobalVariable.TestUserName, GlobalVariable.TestUserPassword)
-		
-		CustomKeywords.'onBoarding.CreateApplication.DeleteApplication'()
-		
-		CustomKeywords.'commonFunctions.browserUtils.CloseBrowser'()
+		//CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'(GlobalVariable.App_Url)
+	  
+		//CustomKeywords.'applications.inSights.ValidateApplication'()
+	  
+		//CustomKeywords.'applications.inSights.verifyInsightsTab'()
+				
+	    CustomKeywords.'applications.inSights.SettingsTab_PublishAVPPolicy'()
+	  
+	    CustomKeywords.'applications.inSights.DesignPolicy'(GlobalVariable.PrincipalOneType,  
+		GlobalVariable.PrincipalPDOne, GlobalVariable.ActionTypeOne, GlobalVariable.ResourceTypeOne,
+	    GlobalVariable.ResourceInput, GlobalVariable.ConditionGroupOneInput)
+			  
+	    CustomKeywords.'applications.inSights.ProvideApprovals'(GlobalVariable.TestUserName, GlobalVariable.TestUserPassword)
+	  
+	    CustomKeywords.'onBoarding.CreateApplication.DeleteApplication'()		 
+	  
+	    //CustomKeywords.'commonFunctions.browserUtils.CloseBrowser'()
+			 
+		 
 
 

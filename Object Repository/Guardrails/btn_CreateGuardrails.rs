@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[text()= 'Create']</value>
+         <value>//span[text()= 'Create']/parent::button</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

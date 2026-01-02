@@ -30,19 +30,26 @@ public class Guardrails {
 	@Keyword
 	public void CreateGuardrail() {
 		WebUI.click(findTestObject('Object Repository/Guardrails/btn_Guardrails'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/dashBoard_Guardrail'), 10)
-		WebUI.click(findTestObject('Object Repository/Guardrails/tab_Guardrails'))
+		//WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/dashBoard_Guardrail'), 10)
+		//WebUI.click(findTestObject('Object Repository/Guardrails/tab_Guardrails'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/btn_CreateGuardrails'), 10)
 		WebUI.click(findTestObject('Object Repository/Guardrails/btn_CreateGuardrails'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/listDesignTime'), 10)
+		WebUI.click(findTestObject('Object Repository/Guardrails/listDesignTime'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/slide_Create Guardrails'), 10)
 		WebUI.sendKeys(findTestObject('Object Repository/Guardrails/input_GuardrailsName'), GlobalVariable.GuardrailName)
 		WebUI.sendKeys(findTestObject('Object Repository/Guardrails/input_GuardrailsDescription'), GlobalVariable.GuardrailDescription)
 		WebUI.sendKeys(findTestObject('Object Repository/Guardrails/input_GuardrailsType'), GlobalVariable.GuardrailsType)
 		WebUI.sendKeys(findTestObject('Object Repository/Guardrails/input_GuardrailsStatus'), GlobalVariable.GuardrailsStatus)
 		WebUI.sendKeys(findTestObject('Object Repository/Guardrails/input_CategoriseAs'), GlobalVariable.GuardrailsCategoriseAs)
+		WebUI.setText(findTestObject('Object Repository/Guardrails/input_GuardrailsOwner'), GlobalVariable.UserName)
+		String OwnerObjectName = "//div[text()='" + GlobalVariable.UserName + "']"
+		TestObject OwnerElement = new TestObject().addProperty("xpath", ConditionType.EQUALS, OwnerObjectName)
+		WebUI.waitForElementVisible(OwnerElement, 10)
+		WebUI.click(OwnerElement)
 		WebUI.click(findTestObject('Object Repository/Guardrails/btn_RemoveCategory'))
-		WebUI.setText(findTestObject('Object Repository/Guardrails/input_Category'), GlobalVariable.GuardrailCategory)
-		String CategoryObjectName = "//div[text()='" + GlobalVariable.GuardrailCategory + "']"
+		WebUI.setText(findTestObject('Object Repository/Guardrails/input_Category'), GlobalVariable.CategoryName)
+		String CategoryObjectName = "//div[text()='" + GlobalVariable.CategoryName + "']"
 		TestObject CategoryElement = new TestObject().addProperty("xpath", ConditionType.EQUALS, CategoryObjectName)
 		WebUI.waitForElementVisible(CategoryElement, 10)
 		WebUI.click(CategoryElement)
@@ -67,7 +74,8 @@ public class Guardrails {
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/input_SearchGuardrail'), 10)
 		WebUI.sendKeys(findTestObject('Object Repository/Guardrails/input_SearchGuardrail'), GlobalVariable.GuardrailName)
 		WebUI.delay(0.5)
-		String xpath = "//input[@placeholder='Search']/ancestor::div[@role='tabpanel']/descendant::p[text()='" + GlobalVariable.GuardrailName + "']"
+		//WebUI.click(findTestObject('Object Repository/Library/btn_MenuSchema'))
+		String xpath = "//div[contains(@class,'fixedNavbar')]/following-sibling::div/descendant::p[text()='" + GlobalVariable.GuardrailName + "']"
 		TestObject guardrailObj = new TestObject("dynamicGuardrail")
 		guardrailObj.addProperty("xpath", ConditionType.EQUALS, xpath)
 		if (WebUI.verifyElementVisible(guardrailObj, FailureHandling.OPTIONAL)) {
@@ -75,6 +83,71 @@ public class Guardrails {
 		} else {
 			KeywordUtil.markFailed("❌ Element with Guardrail name '${GlobalVariable.GuardrailName}' is NOT found.")
 		}
+	}
+
+	@Keyword
+	public void ValidateCategoryInGuardrailBeforeAppAssigning() {
+		WebUI.click(findTestObject('Object Repository/Guardrails/btn_Guardrails'))
+		//WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/dashBoard_Guardrail'), 10)
+		//WebUI.click(findTestObject('Object Repository/Guardrails/tab_Guardrails'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/btn_CreateGuardrails'), 10)
+		WebUI.click(findTestObject('Object Repository/Guardrails/btn_CreateGuardrails'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/listDesignTime'), 10)
+		WebUI.click(findTestObject('Object Repository/Guardrails/listDesignTime'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/slide_Create Guardrails'), 10)
+		WebUI.click(findTestObject('Object Repository/Guardrails/space_Category'))
+		TestObject categoryList = findTestObject('Object Repository/Guardrails/list_Category')
+		List<WebElement> items = WebUI.findWebElements(categoryList, 10)
+		boolean found = false
+		String targetCategory = GlobalVariable.CategoryName.toString().trim()
+		for (WebElement item : items) {
+			String itemText = item.getText().trim()
+			if (itemText.equals(targetCategory)) {
+				KeywordUtil.logInfo("✅ Category found in the list: " + itemText)
+				found = true
+				break
+			}
+		}
+		if (found) {
+			KeywordUtil.markFailed("✅ Expected category '${GlobalVariable.CategoryName}' is present in the list before assigning the application.")
+		} else {
+			KeywordUtil.markPassed("✅ Expected category '${GlobalVariable.CategoryName}' is NOT present in the list before assigning the application.")
+		}
+		WebUI.click(findTestObject('Object Repository/Applications/btn_CloseTest'))
+	}
+
+	@Keyword
+	public void ValidateCategoryInGuardrailAfterAppAssigning() {
+		WebUI.back()
+		WebUI.delay(0.5)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/btn_Guardrails'), 10)
+		WebUI.click(findTestObject('Object Repository/Guardrails/btn_Guardrails'))
+		//WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/dashBoard_Guardrail'), 10)
+		//WebUI.click(findTestObject('Object Repository/Guardrails/tab_Guardrails'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/btn_CreateGuardrails'), 10)
+		WebUI.click(findTestObject('Object Repository/Guardrails/btn_CreateGuardrails'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/listDesignTime'), 10)
+		WebUI.click(findTestObject('Object Repository/Guardrails/listDesignTime'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/slide_Create Guardrails'), 10)
+		WebUI.click(findTestObject('Object Repository/Guardrails/space_Category'))
+		TestObject categoryList = findTestObject('Object Repository/Guardrails/list_Category')
+		List<WebElement> items = WebUI.findWebElements(categoryList, 10)
+		boolean found = false
+		String targetCategory = GlobalVariable.CategoryName.toString().trim()
+		for (WebElement item : items) {
+			String itemText = item.getText().trim()
+			if (itemText.equals(targetCategory)) {
+				KeywordUtil.logInfo("✅ Category found in the list: " + itemText)
+				found = true
+				break
+			}
+		}
+		if (found) {
+			KeywordUtil.markPassed("✅ Expected category '${GlobalVariable.CategoryName}' is present in the list.")
+		} else {
+			KeywordUtil.markFailed("❌ Expected category '${GlobalVariable.CategoryName}' is NOT present in the list.")
+		}
+		WebUI.click(findTestObject('Object Repository/Applications/btn_CloseTest'))
 	}
 
 	@Keyword
@@ -97,12 +170,6 @@ public class Guardrails {
 
 	@Keyword
 	public void DeleteGuardrail() {
-		WebUI.back()
-		WebUI.delay(0.5)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/btn_Guardrails'), 10)
-		WebUI.click(findTestObject('Object Repository/Guardrails/btn_Guardrails'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/dashBoard_Guardrail'), 10)
-		WebUI.click(findTestObject('Object Repository/Guardrails/tab_Guardrails'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/input_SearchGuardrail'), 10)
 		WebUI.sendKeys(findTestObject('Object Repository/Guardrails/input_SearchGuardrail'), GlobalVariable.GuardrailName)
 		WebUI.delay(0.5)

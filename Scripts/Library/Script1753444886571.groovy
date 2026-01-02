@@ -17,47 +17,47 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-      String policyTitle = CustomKeywords.'onBoarding.CreateApplication.getRandomTitle'()
+      //String policyTitle = CustomKeywords.'onBoarding.CreateApplication.getRandomTitle'()
 
 	      CustomKeywords.'commonFunctions.browserUtils.openBrowser'()
 	
 	      CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'(GlobalVariable.App_Url)
 	
 	  	  CustomKeywords.'loginPage.NavigateToLogin.Login'(GlobalVariable.UserName, GlobalVariable.Password)		
-		
+			
+		  //CustomKeywords.'library.Library.CreateEntity'() 
+		  
 		  CustomKeywords.'library.Library.CreateSchema'()
 		  
-		  CustomKeywords.'onBoarding.CreateApplication.DefineAttribute'()
+		  CustomKeywords.'library.Library.DefineLibAttribute'()
 		  
 		  CustomKeywords.'library.Library.SetUpHierarchy'()
 		  
 		  CustomKeywords.'library.Library.CreatePolicy'()
 		  
-		  CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'(GlobalVariable.HomePageUrl)
+		  CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'(GlobalVariable.App_Url)
 		  
-		  CustomKeywords.'onBoarding.CreateApplication.FillApplicationDetails'(
-		  GlobalVariable.ApplicationName, GlobalVariable.AppCategory,
-		  GlobalVariable.ApplicationTags, GlobalVariable.AppOwner,
+		  CustomKeywords.'onBoarding.CreateApplication.FillApplicationDetails'(GlobalVariable.ApplicationName, GlobalVariable.AppCategory, GlobalVariable.ApplicationTags, GlobalVariable.UserName,
 		  GlobalVariable.AppDescription)
 		  
-		  CustomKeywords.'onBoarding.CreateApplication.AddEnvironmentsWithNewPolicy'(
-		  GlobalVariable.EnvironmentName, GlobalVariable.PolicyDescription,
-		  GlobalVariable.ConnectionName, policyTitle)
+		  //CustomKeywords.'onBoarding.CreateApplication.AddEnvironmentsWithNewPolicy'(lobalVariable.EnvironmentName, GlobalVariable.PolicyDescription, GlobalVariable.ConnectionName, policyTitle)
 		  
-		  CustomKeywords.'onBoarding.CreateApplication.DesignSchema'(policyTitle)
+		  CustomKeywords.'onBoarding.CreateApplication.DesignSchema'()
 		  
 		  CustomKeywords.'onBoarding.CreateApplication.DefineAttribute'()
 		  
-		  CustomKeywords.'onBoarding.CreateApplication.SetUpHierarchy'(policyTitle)
+		  CustomKeywords.'onBoarding.CreateApplication.SetUpHierarchy'()
 		  
-		  CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('TestData_template', policyTitle)
+		  CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('TestData_template')
 		  
-		  CustomKeywords.'onBoarding.CreateApplication.CheckForTheApplicationStatus'()
+		  //CustomKeywords.'applications.inSights.SettingsTab_PublishAVPGITPolicy'()
+		  
+		  //CustomKeywords.'onBoarding.CreateApplication.CheckForTheApplicationStatus'()
 		  
 		  CustomKeywords.'applications.inSights.ValidateApplication'()
 		  
 		  CustomKeywords.'library.Library.importPolicy'()
-	  
+	      
 		  CustomKeywords.'library.Library.DeleteSchemaAndPolicy'()
 	  
 		  CustomKeywords.'onBoarding.CreateApplication.DeleteApplication'()
