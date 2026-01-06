@@ -26,9 +26,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.exception.StepFailedException
 import com.kms.katalon.core.util.KeywordUtil
-import org.openqa.selenium.devtools.DevTools
+/*import org.openqa.selenium.devtools.DevTools
 import org.openqa.selenium.devtools.v142.network.Network
-import org.openqa.selenium.devtools.v142.network.model.Response
+import org.openqa.selenium.devtools.v142.network.model.Response*/
 import java.util.function.Consumer
 import org.openqa.selenium.logging.LogType
 
@@ -122,7 +122,7 @@ public class CreateApplication {
 	}
 	
 	
-	@Keyword
+	/*@Keyword
 	public void captureNetworkLogs() {
 		def driver = DriverFactory.getWebDriver()
 		DevTools devTools = driver.getDevTools()
@@ -147,7 +147,7 @@ public class CreateApplication {
 				)
 			} as Consumer
 		)
-		
+	}*/
 			
 		
 		/*def driver = DriverFactory.getWebDriver()
@@ -177,7 +177,7 @@ public class CreateApplication {
 				println "RES  ${e.getResponse().getStatus()} ${e.getResponse().getUrl()}"
 			} as Consumer
 		)*/
-	}
+	
 
 	@Keyword
 	def selectDropdown(TestObject testObject, String value) {
