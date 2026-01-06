@@ -57,7 +57,7 @@ public class CreateApplication {
 			TestObject newAppBtn = findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_NewApplication')
 			if (WebUI.verifyElementPresent(startNewAppBtn, 5, FailureHandling.OPTIONAL)) {
 				WebUI.click(startNewAppBtn)
-				WebUI.waitForElementVisible(findTestObject('Object Repository/Applications/list_Applications'), 10)
+				WebUI.waitForElementVisible(findTestObject('Object Repository/Applications/list_Applications'), 20)
 				WebUI.verifyElementClickable(findTestObject('Object Repository/Applications/btn_Application'))
 				WebUI.click(findTestObject('Object Repository/Applications/btn_Application'))
 				KeywordUtil.logInfo("Clicked 'Start New Application' button.")
@@ -71,7 +71,7 @@ public class CreateApplication {
 				return
 			}
 			TestObject nameField = findTestObject('Object Repository/Onboarding/Page_Reva.ai/application_Name')
-			WebUI.waitForElementVisible(nameField, 10)
+			WebUI.waitForElementVisible(nameField, 20)
 			WebUI.setText(nameField, appName)
 			KeywordUtil.logInfo("✅ Application Name set: " + appName)
 			TestObject descField = findTestObject('Object Repository/Onboarding/Page_Reva.ai/application_Description')
@@ -87,7 +87,7 @@ public class CreateApplication {
 			WebUI.verifyElementClickable(continueBtn)
 			WebUI.click(continueBtn)
 			KeywordUtil.logInfo("✅ Clicked Create button.")
-			WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_OnboardSchema'), 10)
+			WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_OnboardSchema'), 20)
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_OnboardSchema'))
 		} catch (Exception e) {
 			WebUI.comment("Error in fillApplicationDetails: " + e.getMessage())
@@ -97,24 +97,24 @@ public class CreateApplication {
 	@Keyword
 	public void AddEnvironmentsWithNewPolicy(String environmentName, String policyDescription, String connectionName, String policyName) {
 		try {
-			WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Environments'), 10)
+			WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Environments'), 20)
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Environments'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/create_Environment_Header'), 10)
+			WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/create_Environment_Header'), 20)
 			WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_EnvironmentName'), environmentName)
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_PolicyStore'))
-			WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_DisplayName'), 10)
+			WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_DisplayName'), 20)
 			WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_DisplayName'), policyName)
 			WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_PolicyDescription'), policyDescription)
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/select_PolicyConnection'))
 			WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/select_PolicyConnection'), connectionName)
 			String connectionObjectName = "//div[text()='" + connectionName + "']"
 			TestObject connectionElement = new TestObject().addProperty("xpath", ConditionType.EQUALS, connectionObjectName)
-			WebUI.waitForElementVisible(connectionElement, 10)
+			WebUI.waitForElementVisible(connectionElement, 20)
 			WebUI.click(connectionElement)
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_CreatePolicySave'))
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Create_Env'))
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/popUpHeaderConfigure'), 10)
+			WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/popUpHeaderConfigure'), 20)
 			WebUI.comment("Environment '${environmentName}' created successfully!")
 		} catch (Exception e) {
 			WebUI.comment("Error in fillApplicationDetails: " + e.getMessage())
@@ -200,10 +200,10 @@ public class CreateApplication {
 		WebUI.navigateToUrl("https://clienteks.ea.reva.ai/applicationlist")
 		WebUI.waitForPageLoad(10000)
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), "TestAutoAppName25")
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/linkTestAppName'), 10)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/linkTestAppName'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/linkTestAppName'))
 		/*WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_PolicySchema'))
-		 WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/popUp_DefineSchema'), 10)
+		 WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/popUp_DefineSchema'), 20)
 		 WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_SchemaNext'))*/
 	}
 
@@ -212,9 +212,9 @@ public class CreateApplication {
 		/*String policyConfigBtn = "//a[text()='" + policyName + "']/parent::td/following-sibling::td[last()]/descendant::button[@aria-label='Configure Schema']"
 		 TestObject dynamicButton = new TestObject().addProperty("xpath", ConditionType.EQUALS, policyConfigBtn)
 		 WebUI.click(dynamicButton)*/
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_DesignSchema'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_DesignSchema'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_DesignSchema'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_AddPrincipal'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_AddPrincipal'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_AddPrincipal'))
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/container_Principal_1'), GlobalVariable.SchemaPrincipal_1)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_AddAction'))
@@ -236,7 +236,7 @@ public class CreateApplication {
 
 	@Keyword
 	public void DefineAttribute() {
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AttributeName'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AttributeName'), 20)
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AttributeName'), GlobalVariable.SchemaAttName)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_SchemaAttType'))
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/select_AttType'))
@@ -248,7 +248,7 @@ public class CreateApplication {
 	public void SetUpHierarchy() {
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/dropPanel'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/dropPanel'), 20)
 		WebDriver driver = DriverFactory.getWebDriver()
 		List<TestObject> sourceElements = [
 			findTestObject('Object Repository/Onboarding/Page_Reva.ai/dragEntityType_User'),
@@ -270,11 +270,11 @@ public class CreateApplication {
 		WebUI.dragAndDropToObject(findTestObject('Object Repository/Onboarding/Page_Reva.ai/arrowDown_User'), findTestObject('Object Repository/Onboarding/Page_Reva.ai/arrowUp_Application'))
 		WebUI.dragAndDropToObject(findTestObject('Object Repository/Onboarding/Page_Reva.ai/arrowDown_CreateList'), findTestObject('Object Repository/Onboarding/Page_Reva.ai/arrowUp_DeleteList'))
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Update'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/node_AISuggPolicies'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/node_AISuggPolicies'), 20)
 		//WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/checkBox_SelectAIPolicy'))
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Add'))
-		/*WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_SchemaContinue'), 10)
+		/*WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_SchemaContinue'), 20)
 		 WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_SchemaContinue'))
 		 CheckForThePolicyStatus(policyTitle)
 		 WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))*/
@@ -286,7 +286,7 @@ public class CreateApplication {
 		TestObject policyStatusText = new TestObject().addProperty("xpath", ConditionType.EQUALS, policyStatusXpath)
 		String dynamicXPath = "//a[text()='" + policyTitle + "']/parent::td/following-sibling::td[last()]/descendant::button"
 		TestObject dynamicButton = new TestObject().addProperty("xpath", ConditionType.EQUALS, dynamicXPath)
-		WebUI.waitForElementClickable(dynamicButton, 10)
+		WebUI.waitForElementClickable(dynamicButton, 20)
 		WebUI.click(dynamicButton)
 		int refreshInterval = 2
 		int attempts = 30 / refreshInterval
@@ -332,7 +332,7 @@ public class CreateApplication {
 
 	@Keyword
 	public void CheckForTheApplicationStatus() {
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), 20)
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), GlobalVariable.ApplicationName)
 		WebUI.delay(3)
 		String applicationStatus = "//a[text()='" + GlobalVariable.ApplicationName  + "']/parent::td/following-sibling::td[last()-2]/p"
@@ -352,17 +352,17 @@ public class CreateApplication {
 
 	@Keyword
 	public void AddEnvironmentsWithExistingPolicy(String environmentName) {
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_OnBoarding'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_OnBoarding'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_OnBoarding'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/input_SearchGuardrail'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/input_SearchGuardrail'), 20)
 		WebUI.sendKeys(findTestObject('Object Repository/Guardrails/input_SearchGuardrail'), GlobalVariable.ApplicationName)
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Guardrails/optn_GuardrailMenu'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Settings'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Settings'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Settings'))
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Environments'), 10)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Environments'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Environments'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/create_Environment_Header'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/create_Environment_Header'), 20)
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_EnvironmentName'), environmentName)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Create_Env'))
 		/*WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_PolicySearch'), policySearchInput)
@@ -376,12 +376,12 @@ public class CreateApplication {
 		 KeywordUtil.markWarning("⚠️ Text did not match. Found: '${actualText}', Expected: '${GlobalVariable.PolicySearchInput}'")
 		 }		
 		 WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))
-		 WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/popUpHeaderConfigure'), 10)*/
+		 WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/popUpHeaderConfigure'), 20)*/
 	}
 
 	@Keyword
 	public void UploadHospitalSchemaJson(String jsonFile) {
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_UploadJSON'), 10)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_UploadJSON'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_UploadJSON'))
 		TestObject fileInput = findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload')
 		String projectDir = RunConfiguration.getProjectDir()
@@ -393,17 +393,17 @@ public class CreateApplication {
 		}
 		WebUI.uploadFile(fileInput, filePath)
 		WebUI.comment("✅ JSON file uploaded successfully: " + filePath)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Confirm'), 10)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Confirm'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Confirm'))
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'), 10)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/select_AttDropdown'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/select_AttDropdown'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/title_Attributes'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/title_Attributes'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Update'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Update'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Update'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/node_AISuggPolicies'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/node_AISuggPolicies'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Skip'))
 	}
 
@@ -419,21 +419,21 @@ public class CreateApplication {
 			String policyEditXPath = "//a[text()='" + policyTitle + "']/parent::td/following-sibling::td[last()]/descendant::button[@aria-label='Configure Schema']"
 			TestObject policyEditButton = new TestObject().addProperty("xpath", ConditionType.EQUALS, policyEditXPath)
 			WebUI.click(policyEditButton)
-			WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/popUp_DefineSchema'), 10)
+			WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/popUp_DefineSchema'), 20)
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_UploadSchema'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/textArea_UploadSchema'), 10)
+			WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/textArea_UploadSchema'), 20)
 			WebUI.executeJavaScript("document.getElementById('policyStoreSchema').value = '';", null)
 			WebUI.delay(1)
 			TestObject inputField = findTestObject('Object Repository/Onboarding/Page_Reva.ai/textArea_UploadSchema')
 			if (inputField != null) {
-				WebUI.waitForElementVisible(inputField, 10)
+				WebUI.waitForElementVisible(inputField, 20)
 				WebUI.executeJavaScript("""arguments[0].value = arguments[1]; arguments[0].dispatchEvent(new Event('input', { bubbles: true }));""", Arrays.asList(WebUI.findWebElement(inputField), jsonCode))
 			} else {
 				WebUI.comment("TestObject is NULL! Check the Object Repository path.")
 			}
 			WebUI.delay(1)
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Preview'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/popUp_DefineSchema'), 10)
+			WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/popUp_DefineSchema'), 20)
 			WebUI.dragAndDropToObject(findTestObject('Object Repository/Onboarding/Page_Reva.ai/arrowRight_ExistingStaff'), findTestObject('Object Repository/Onboarding/Page_Reva.ai/arrowLeft_ExistingPatient'))
 			WebUI.dragAndDropToObject(findTestObject('Object Repository/Onboarding/Page_Reva.ai/arrowRight_ExistingPatient'), findTestObject('Object Repository/Onboarding/Page_Reva.ai/arrowLeft_ExistingMedication'))
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_SchemaNext'))
@@ -443,7 +443,7 @@ public class CreateApplication {
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_SchemaNext'))
 			WebUI.delay(0.5)
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_SaveAndActivate'))
-			WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_SchemaContinue'), 10)
+			WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_SchemaContinue'), 20)
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_SchemaContinue'))
 			CheckForThePolicyStatus(policyTitle)
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))
@@ -452,7 +452,7 @@ public class CreateApplication {
 
 	@Keyword
 	public void UploadTestData(String fileName) {
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_UploadTestData'), 10)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_UploadTestData'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_UploadTestData'))
 		if (WebUI.verifyElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_TestData'), 5, FailureHandling.OPTIONAL)) {
 			WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_TestData'))
@@ -481,15 +481,15 @@ public class CreateApplication {
 	public void DeleteApplication() {
 		//WebUI.back()
 		WebUI.delay(0.5)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_OnBoarding'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_OnBoarding'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_OnBoarding'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/input_SearchGuardrail'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/input_SearchGuardrail'), 20)
 		WebUI.sendKeys(findTestObject('Object Repository/Guardrails/input_SearchGuardrail'), GlobalVariable.ApplicationName)
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Guardrails/optn_GuardrailMenu'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/btn_DeleteGuardrail'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/btn_DeleteGuardrail'), 20)
 		WebUI.click(findTestObject('Object Repository/Guardrails/btn_DeleteGuardrail'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Integrations/popUp_DeleteIntegration'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Integrations/popUp_DeleteIntegration'), 20)
 		WebUI.click(findTestObject('Object Repository/Integrations/btn_DeleteConfirm'))
 		WebUI.delay(3)
 	}

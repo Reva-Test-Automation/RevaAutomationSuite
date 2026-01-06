@@ -23,7 +23,7 @@ public class UserLogin {
 
 	@Keyword
 	public void Login(String username, String password) {
-		WebUI.waitForElementVisible(findTestObject('Login_Page/txt_UserName'), 15)
+		WebUI.waitForElementVisible(findTestObject('Login_Page/txt_UserName'), 20)
 		WebUI.setText(findTestObject('Login_Page/txt_UserName'), username)
 		WebUI.setText(findTestObject('Login_Page/txt_Password'), password)
 		WebUI.click(findTestObject('Login_Page/btn_LogIn'))

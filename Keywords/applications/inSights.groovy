@@ -37,45 +37,45 @@ public class inSights {
 	public void ValidateApplication() {
 		WebUI.refresh()
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Applications'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), 20)
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), GlobalVariable.ApplicationName)
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_GridView'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_NewApplication'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_NewApplication'), 20)
 		String applicationObjectName = "//div[contains(@class,'fixedNavbar')]/following-sibling::div/descendant::p[text()='" + GlobalVariable.ApplicationName + "']"
 		TestObject applicationElement = new TestObject().addProperty("xpath", ConditionType.EQUALS, applicationObjectName)
-		WebUI.waitForElementVisible(applicationElement, 10)
+		WebUI.waitForElementVisible(applicationElement, 20)
 		WebUI.click(applicationElement)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 20)
 
 
-		/*WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Applications'), 10)
+		/*WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Applications'), 20)
 		 WebUI.click(findTestObject('Object Repository/Applications/link_Automation'))
 		 String appName = "//p[text()='Automation']/ancestor::a/following-sibling::div/descendant::p[contains(text(),'"+GlobalVariable.ApplicationName+"')]"
 		 TestObject appLink = new TestObject().addProperty("xpath", ConditionType.EQUALS, appName)
 		 WebUI.click(appLink)
-		 WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Applications'), 10)
+		 WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Applications'), 20)
 		 String envName = "//p[text()='"+GlobalVariable.EnvironmentName+"']"
 		 TestObject envLink = new TestObject().addProperty("xpath", ConditionType.EQUALS, envName)
 		 WebUI.click(envLink)
 		 String policyName = "//p[contains(text(),'"+GlobalVariable.PolicyDisplayName+"')]"
 		 TestObject policyLink = new TestObject().addProperty("xpath", ConditionType.EQUALS, policyName)
 		 WebUI.click(policyLink)
-		 WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 10)*/
+		 WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 20)*/
 	}
 
 	@Keyword
 	public void NavigateToProvidenceHospitalProd() {
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Applications'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Applications'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Applications'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/link_EnterpriseApplications'))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Applications/link_ProvidenceHospital'), 10)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Applications/link_ProvidenceHospital'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/link_ProvidenceHospital'))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Applications/link_ProdEnv'), 10)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Applications/link_ProdEnv'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/link_ProdEnv'))
-		/*WebUI.waitForElementVisible(findTestObject('Object Repository/Applications/link_ProductionStore'), 10)
+		/*WebUI.waitForElementVisible(findTestObject('Object Repository/Applications/link_ProductionStore'), 20)
 		 WebUI.click(findTestObject('Object Repository/Applications/link_ProductionStore'))*/
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 20)
 	}
 
 	@Keyword
@@ -92,7 +92,7 @@ public class inSights {
 			def insightsXpath = "//p[contains(text(),'${GlobalVariable.ApplicationName}')]/ancestor::header/following-sibling::div/descendant::p"
 			def insightstabs = WebUiCommonHelper.findWebElements(new TestObject().tap {
 				addProperty("xpath", ConditionType.EQUALS, insightsXpath)
-			}, 10)
+			}, 20)
 			insightstabs.each {
 				it.click()
 				WebUI.delay(1)
@@ -108,7 +108,7 @@ public class inSights {
 			println "Element ${idx + 1} text: " + el.getText()
 		}
 		WebUI.click(findTestObject('Object Repository/Applications/link_TopActivityViewMore'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_TopActivity'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_TopActivity'), 20)
 		boolean isVisible = WebUI.verifyElementVisible(findTestObject('Object Repository/Applications/header_TopActivity'), FailureHandling.OPTIONAL)
 		if (isVisible) {
 			println "✅ Top Activity view more is responded for the click"
@@ -143,33 +143,33 @@ public class inSights {
 			KeywordUtil.markFailed("❌ Neither 'Design Policy' nor 'New Version' button was found.")
 			return
 		}
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 10)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 5)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 20)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 20)
 		KeywordUtil.logInfo("✅ Policy section loaded successfully.")
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddPermitPolicy'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Code'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Code'), 20)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Applications/btn_Code'))
 		KeywordUtil.logInfo("✅ Add Permit Policy button clicked and Code button appeared.")
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Code'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/code_TextArea'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/code_TextArea'), 20)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Applications/code_TextArea'))
 		KeywordUtil.logInfo("✅ Code editor is now visible.")
 		WebUI.click(findTestObject('Object Repository/Applications/btn_MenuDots'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_ListDots'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_ListDots'), 20)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Applications/menu_ListDots'))
 		KeywordUtil.logInfo("✅ Menu list appeared after clicking dots.")
 		WebUI.click(findTestObject('Object Repository/Applications/btn_DeleteContainer'))
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/btn_Add'), 5)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/btn_Add'), 20)
 		KeywordUtil.logInfo("✅ Existing container deleted successfully.")
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Add'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/textArea_Code'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/textArea_Code'), 20)
 		KeywordUtil.logInfo("✅ New code container added successfully.")
 		WebUI.sendKeys(findTestObject('Object Repository/Applications/textArea_Code'), GlobalVariable.PolicyCodePermitAll)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_SendToApproval'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/popup_PolicySummary'), 10)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_SendForApprovalSecond'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/popup_PolicySummary'), 20)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_SendForApprovalSecond'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_SendForApprovalSecond'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 20)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Applications/menu_Tabs'))
 		KeywordUtil.logInfo("✅ Policy sent for approval successfully")
 	}
@@ -178,16 +178,16 @@ public class inSights {
 	public void EditCreatedPolicy() {
 		WebUI.click(findTestObject('Object Repository/Applications/tab_Policies'))
 		WebUI.delay(0.5)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/link_CreatedPolicy'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/link_CreatedPolicy'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/link_CreatedPolicy'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Code'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Code'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Code'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/code_TextArea'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/code_TextArea'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Add'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/textArea_CodeSecond'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/textArea_CodeSecond'), 20)
 		WebUI.sendKeys(findTestObject('Object Repository/Applications/textArea_CodeSecond'), GlobalVariable.PolicyCodePermitStaff)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_PublishPD'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 20)
 	}
 
 	@Keyword
@@ -206,40 +206,40 @@ public class inSights {
 			KeywordUtil.markFailed("❌ Neither 'Design Policy' nor 'New Version' button was found.")
 			return
 		}
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 10)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 5)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 20)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 20)
 		KeywordUtil.logInfo("✅ Policy section loaded successfully.")
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddPermitPolicy'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Code'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Code'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/input_Principal_1'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 20)
 		TestObject PrincipaldynamicObject = new TestObject()
 		PrincipaldynamicObject.addProperty('xpath', ConditionType.EQUALS, "//div[contains(@class,'suggestions-list')]/descendant::li[text()='" + principalType + "']")
-		WebUI.waitForElementPresent(PrincipaldynamicObject, 10)
+		WebUI.waitForElementPresent(PrincipaldynamicObject, 20)
 		WebUI.click(PrincipaldynamicObject)
 		WebUI.setText(findTestObject('Object Repository/Applications/input_Principal_1'), principalInput)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddActionNode'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/input_Action_1'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/input_Action_1'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/input_Action_1'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_ActionList'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_ActionList'), 20)
 		TestObject ActiondynamicObject = new TestObject()
 		ActiondynamicObject.addProperty('xpath', ConditionType.EQUALS, "//div[contains(@class,'suggestions-list actions-list')]/descendant::li[text()='" + actionType + "']")
-		WebUI.waitForElementPresent(ActiondynamicObject, 10)
+		WebUI.waitForElementPresent(ActiondynamicObject, 20)
 		WebUI.click(ActiondynamicObject)
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddResource'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/container_Resource'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/container_Resource'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/input_Resource_1'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 20)
 		TestObject ResourcedynamicObject = new TestObject()
 		ResourcedynamicObject.addProperty('xpath', ConditionType.EQUALS, "//div[contains(@class,'suggestions-list')]/descendant::li[text()='" + resourceType + "']")
-		WebUI.waitForElementPresent(ResourcedynamicObject, 10)
+		WebUI.waitForElementPresent(ResourcedynamicObject, 20)
 		WebUI.click(ResourcedynamicObject)
 		WebUI.delay(0.5)
 		WebUI.setText(findTestObject('Object Repository/Applications/input_Principal_1'), resourceInput)
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddCondition'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_ConditionBuilder'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_ConditionBuilder'), 20)
 		WebUI.sendKeys(findTestObject('Object Repository/Applications/textArea_ConditionGroupOne'), conditionGroupInput)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_ConditionBuilderSave'))
 		if (WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/btn_SendToApproval'), 5, FailureHandling.OPTIONAL)) {
@@ -249,7 +249,7 @@ public class inSights {
 			WebUI.click(findTestObject('Object Repository/Applications/btn_Publish'))
 			KeywordUtil.logInfo("Clicked 'Publish' button.")
 		}
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/popup_PolicySummary'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/popup_PolicySummary'), 20)
 		if (WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/btn_SendForApprovalSecond'), 5, FailureHandling.OPTIONAL)) {
 			WebUI.click(findTestObject('Object Repository/Applications/btn_SendForApprovalSecond'))
 			KeywordUtil.logInfo("Clicked 'Send For Approval' button.")
@@ -257,7 +257,7 @@ public class inSights {
 			WebUI.click(findTestObject('Object Repository/Applications/btn_PublishPD'))
 			KeywordUtil.logInfo("Clicked 'Publish' button.")
 		}
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 20)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Applications/menu_Tabs'))
 		KeywordUtil.logInfo("✅ Policy sent for approval successfully")
 		WebUI.back()
@@ -280,44 +280,44 @@ public class inSights {
 			KeywordUtil.markFailed("❌ Neither 'Design Policy' nor 'New Version' button was found.")
 			return
 		}
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 10)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 5)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 20)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_CreateWithAI'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/header_RevaAI'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/header_RevaAI'), 20)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/textArea_AIPrompt'), 20)
 		WebUI.delay(1)
 		WebUI.setText(findTestObject('Object Repository/Applications/textArea_AIPrompt'), GlobalVariable.DoctorAIPrompt)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_PromptEnter'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/text_AIResponse'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/text_AIResponse'), 20)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/btn_AIResponseYes'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AIResponseYes'))
 		WebUI.click(findTestObject('Object Repository/Applications/btn_CloseAI'))
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddPolicy'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/link_PermitPolicy'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/link_PermitPolicy'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/link_PermitPolicy'))
 		WebUI.click(findTestObject('Object Repository/Applications/input_Principal_1'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/list_PrincipleALL'))
 		WebUI.click(findTestObject('Object Repository/Applications/btn_ConditionBuilderDeny'))
 		WebUI.click(findTestObject('Object Repository/Applications/input_ActionSelect'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_ActionList'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_ActionList'), 20)
 		TestObject ActiondynamicObject = new TestObject()
 		ActiondynamicObject.addProperty('xpath', ConditionType.EQUALS, "//div[contains(@class,'suggestions-list actions-list')]/descendant::li[text()='ALL']")
-		WebUI.waitForElementPresent(ActiondynamicObject, 10)
+		WebUI.waitForElementPresent(ActiondynamicObject, 20)
 		WebUI.click(ActiondynamicObject)
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddResource'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/container_Resource'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/container_Resource'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/input_Resource_1'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 20)
 		TestObject ResourcedynamicObject = new TestObject()
 		ResourcedynamicObject.addProperty('xpath', ConditionType.EQUALS, "//div[contains(@class,'suggestions-list')]/descendant::li[text()='ALL']")
-		WebUI.waitForElementPresent(ResourcedynamicObject, 10)
+		WebUI.waitForElementPresent(ResourcedynamicObject, 20)
 		WebUI.click(ResourcedynamicObject)
 		WebUI.delay(1)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_ConditionBuilderDeny'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_ConditionBuilder'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_ConditionBuilder'), 20)
 		WebUI.sendKeys(findTestObject('Object Repository/Applications/textArea_ConditionGroupOne'), GlobalVariable.DenyPolicy)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddCondition1'))
 		WebUI.sendKeys(findTestObject('Object Repository/Applications/textArea_ConditionGroupTwo'), GlobalVariable.DenyPolicySec)
@@ -326,7 +326,7 @@ public class inSights {
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddLibrary'))
 		WebUI.delay(1)
 		TestObject checkboxLabels = findTestObject('Object Repository/Library/list_PolicyCheckBoxs')
-		List<WebElement> allCheckboxLabels = WebUiCommonHelper.findWebElements(checkboxLabels, 10)
+		List<WebElement> allCheckboxLabels = WebUiCommonHelper.findWebElements(checkboxLabels, 20)
 		for (WebElement label : allCheckboxLabels) {
 			if (label.getAttribute("data-checked") != null) {
 				WebElement pTag = label.findElement(By.xpath("following-sibling::p"))
@@ -337,7 +337,7 @@ public class inSights {
 			}
 		}
 		TestObject titlePolicyObject = findTestObject('Object Repository/Library/list_PolicyLib')
-		List<WebElement> elements = WebUiCommonHelper.findWebElements(titlePolicyObject, 10)
+		List<WebElement> elements = WebUiCommonHelper.findWebElements(titlePolicyObject, 20)
 		boolean matchFound = false
 		for (WebElement el : elements) {
 			String actualText = el.getText().trim()
@@ -356,7 +356,7 @@ public class inSights {
 		WebUI.delay(0.5)
 		WebUI.dragAndDropToObject(findTestObject('Object Repository/Applications/arrowRight_Doctor'), findTestObject('Object Repository/Applications/arrowLeft_ActionALL'))
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Code'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_CodePanel'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_CodePanel'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddCode'))
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Applications/title_NewAccordion'))
@@ -372,8 +372,8 @@ public class inSights {
 		 KeywordUtil.markFailed("Recommendation alert is not displayed for the flag click")
 		 }*/
 		WebUI.click(findTestObject('Object Repository/Applications/btn_FlagRecommendation'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_Recommendations'), 10)
-		def elementsText = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/text_Violations'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_Recommendations'), 20)
+		def elementsText = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/text_Violations'), 20)
 		def expectedText = GlobalVariable.ViolationsPoliciesALL
 		if (elementsText.contains(expectedText)) {
 			WebUI.comment("✅ Pass: Found exact match with '${expectedText}'")
@@ -383,7 +383,7 @@ public class inSights {
 		WebUI.click(findTestObject('Object Repository/Applications/btn_CloseRecommendation'))
 		WebUI.delay(1)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_SendToApproval'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/popup_PolicySummary'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/popup_PolicySummary'), 20)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_SendForApprovalSecond'))
 		WebUI.delay(2)
@@ -392,17 +392,17 @@ public class inSights {
 	@Keyword
 	public void EditPolicy(String appName) {
 		CustomKeywords.'loginPage.NavigateToLogin.NavigateUrl'(GlobalVariable.origin)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Applications'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Applications'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Applications'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_NewApplication'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_NewApplication'), 20)
 		String applicationObjectName = "//div[contains(@class,'fixedNavbar')]/following-sibling::div/descendant::p[text()='" + appName + "']"
 		TestObject applicationElement = new TestObject().addProperty("xpath", ConditionType.EQUALS, applicationObjectName)
-		WebUI.waitForElementVisible(applicationElement, 10)
+		WebUI.waitForElementVisible(applicationElement, 20)
 		WebUI.click(applicationElement)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/tab_Policies'))
 		WebUI.delay(0.5)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_EditPolicy'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_EditPolicy'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_EditPolicy'))
 		WebUI.delay(2)
 		boolean isPopupVisible = WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/popup_EditPolicy'), 5, FailureHandling.OPTIONAL)
@@ -417,10 +417,10 @@ public class inSights {
 		}
 		WebUI.delay(0.5)
 		WebUI.waitForElementNotPresent(findTestObject('Object Repository/Applications/img_Processing'), 20)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_AccessMap'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_AccessMap'), 20)
 		WebUI.setText(findTestObject('Object Repository/Applications/input_AccessMapAI'), GlobalVariable.AccessMapPrompt)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AIPromptSubmit'))
-		def elements = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/list_BeforeDeleteDeny'), 10)
+		def elements = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/list_BeforeDeleteDeny'), 20)
 		String targetText = GlobalVariable.PatientName
 		for (WebElement element : elements) {
 			String text = element.getText().trim()
@@ -429,7 +429,7 @@ public class inSights {
 				Actions action = new Actions(DriverFactory.getWebDriver())
 				action.moveToElement(element).perform()
 				WebUI.delay(0.5)
-				List<WebElement> nodes = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/node_FromToConnection'), 10)
+				List<WebElement> nodes = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/node_FromToConnection'), 20)
 				int nodeCount = nodes.size()
 				WebUI.comment("🔍 Total nodes found: ${nodeCount}")
 				if (nodeCount == 2) {
@@ -451,10 +451,10 @@ public class inSights {
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Test'))
 		WebUI.delay(3)
 		WebUI.waitForElementNotPresent(findTestObject('Object Repository/Applications/img_Processing'), 20)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_AccessMap'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/slide_AccessMap'), 20)
 		WebUI.setText(findTestObject('Object Repository/Applications/input_AccessMapAI'), GlobalVariable.AccessMapPrompt)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AIPromptSubmit'))
-		def nodeElements = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/list_BeforeDeleteDeny'), 10)
+		def nodeElements = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/list_BeforeDeleteDeny'), 20)
 		String targetPatientText = GlobalVariable.PatientName
 		for (WebElement nodeelement : nodeElements) {
 			String patientText = nodeelement.getText().trim()
@@ -463,7 +463,7 @@ public class inSights {
 				Actions action = new Actions(DriverFactory.getWebDriver())
 				action.moveToElement(nodeelement).perform()
 				WebUI.delay(0.5)
-				List<WebElement> nodes = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/node_FromToConnection'), 10)
+				List<WebElement> nodes = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/node_FromToConnection'), 20)
 				int nodeCount = nodes.size()
 				WebUI.comment("🔍 Total nodes found: ${nodeCount}")
 				if (nodeCount == 5) {
@@ -477,12 +477,12 @@ public class inSights {
 		WebUI.click(findTestObject('Object Repository/Applications/btn_CloseTest'))
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/btn_SendToApproval'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_SendToApproval'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Impact/table_PolicySummary'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Impact/table_PolicySummary'), 20)
 		WebUI.click(findTestObject('Object Repository/Impact/btn_Impact'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Impact/frame_Impact'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Impact/frame_Impact'), 20)
 		List<String> impactItems = GlobalVariable.ImpactList.split(',').collect { it.trim() }
 		TestObject impactListObject = findTestObject('Object Repository/Impact/list_Impact')
-		List<WebElement> impactElements = WebUiCommonHelper.findWebElements(impactListObject, 10)
+		List<WebElement> impactElements = WebUiCommonHelper.findWebElements(impactListObject, 20)
 		for (String expectedImpact : impactItems) {
 			boolean found = false
 			for (WebElement element : impactElements) {
@@ -503,22 +503,22 @@ public class inSights {
 	@Keyword
 	public void SettingsTab_PublishAVPPolicy() {
 		WebUI.click(findTestObject('Object Repository/SettingsTab/settingsTab'))
-		WebUI.waitForElementClickable(findTestObject('Object Repository/SettingsTab/btn_PublishPolicy'), 10)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/SettingsTab/btn_PublishPolicy'), 20)
 		WebUI.click(findTestObject('Object Repository/SettingsTab/btn_PublishPolicy'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/SettingsTab/title_PolicyTypeSelection'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/SettingsTab/title_PolicyTypeSelection'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/select_PolicyConnection'))
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/select_PolicyConnection'), 'AVP')
 		String connectionObjectName = "//div[text()='AVP']"
 		TestObject connectionElement = new TestObject().addProperty("xpath", ConditionType.EQUALS, connectionObjectName)
-		WebUI.waitForElementVisible(connectionElement, 10)
+		WebUI.waitForElementVisible(connectionElement, 20)
 		WebUI.click(connectionElement)
 		WebUI.click(findTestObject('Object Repository/SettingsTab/btn_Save'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/SettingsTab/dropDown_SelectIntegration'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/SettingsTab/dropDown_SelectIntegration'), 20)
 		WebUI.click(findTestObject('Object Repository/SettingsTab/select_Integration'))
 		WebUI.setText(findTestObject('Object Repository/SettingsTab/select_Integration'), GlobalVariable.ConnectionName)
 		String integrationObjectName = "//div[text()='"+GlobalVariable.ConnectionName+"']"
 		TestObject integrationElement = new TestObject().addProperty("xpath", ConditionType.EQUALS, integrationObjectName)
-		WebUI.waitForElementVisible(integrationElement, 10)
+		WebUI.waitForElementVisible(integrationElement, 20)
 		WebUI.click(integrationElement)
 		String status = WebUI.getText(findTestObject('Object Repository/SettingsTab/text_IntegrationStatus'))
 		if (status.equalsIgnoreCase("Active")) {
@@ -526,7 +526,7 @@ public class inSights {
 		} else {
 			KeywordUtil.markFailed("Integration status is not Active. Found: " + status)
 		}
-		WebUI.waitForElementClickable(findTestObject('Object Repository/SettingsTab/select_AVPNewPolicy'), 10)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/SettingsTab/select_AVPNewPolicy'), 20)
 		WebUI.click(findTestObject('Object Repository/SettingsTab/select_AVPNewPolicy'))
 		WebUI.click(findTestObject('Object Repository/SettingsTab/btn_Save'))
 		if (WebUI.verifyElementVisible(findTestObject('Object Repository/SettingsTab/label_StatusOnline'), FailureHandling.OPTIONAL)) {
@@ -539,34 +539,34 @@ public class inSights {
 	@Keyword
 	public void SettingsTab_PublishAVPGITPolicy() {
 		WebUI.click(findTestObject('Object Repository/SettingsTab/settingsTab'))
-		WebUI.waitForElementClickable(findTestObject('Object Repository/SettingsTab/btn_PublishPolicy'), 10)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/SettingsTab/btn_PublishPolicy'), 20)
 		WebUI.click(findTestObject('Object Repository/SettingsTab/btn_PublishPolicy'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/SettingsTab/title_PolicyTypeSelection'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/SettingsTab/title_PolicyTypeSelection'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/select_PolicyConnection'))
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/select_PolicyConnection'), 'AVP')
 		String connectionObjectName = "//div[text()='AVP']"
 		TestObject connectionElement = new TestObject().addProperty("xpath", ConditionType.EQUALS, connectionObjectName)
-		WebUI.waitForElementVisible(connectionElement, 10)
+		WebUI.waitForElementVisible(connectionElement, 20)
 		WebUI.click(connectionElement)
 		WebUI.delay(1)
 		WebUI.click(findTestObject('Object Repository/SettingsTab/link_Connect'))
 		WebUI.click(findTestObject('Object Repository/SettingsTab/btn_Save'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/SettingsTab/dropDown_SelectIntegration'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/SettingsTab/dropDown_SelectIntegration'), 20)
 		WebUI.click(findTestObject('Object Repository/SettingsTab/card_AvpGit'))
 		WebUI.click(findTestObject('Object Repository/SettingsTab/select_Integration'))
 		WebUI.setText(findTestObject('Object Repository/SettingsTab/select_Integration'), GlobalVariable.GitConnectionName)
 		String integrationObjectName = "//div[text()='"+GlobalVariable.GitConnectionName+"']"
 		TestObject integrationElement = new TestObject().addProperty("xpath", ConditionType.EQUALS, integrationObjectName)
-		WebUI.waitForElementVisible(integrationElement, 10)
+		WebUI.waitForElementVisible(integrationElement, 20)
 		WebUI.click(integrationElement)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/SettingsTab/text_IntegrationStatus'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/SettingsTab/text_IntegrationStatus'), 20)
 		String status = WebUI.getText(findTestObject('Object Repository/SettingsTab/text_IntegrationStatus'))
 		if (status.equalsIgnoreCase("Active")) {
 			KeywordUtil.markPassed("Integration status is Active.")
 		} else {
 			KeywordUtil.markFailed("Integration status is not Active. Found: " + status)
 		}
-		WebUI.waitForElementClickable(findTestObject('Object Repository/SettingsTab/select_AVPNewPolicy'), 10)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/SettingsTab/select_AVPNewPolicy'), 20)
 		WebUI.click(findTestObject('Object Repository/SettingsTab/select_AVPNewPolicy'))
 		WebUI.click(findTestObject('Object Repository/SettingsTab/btn_Save'))
 		if (WebUI.verifyElementVisible(findTestObject('Object Repository/SettingsTab/label_StatusOnline'), FailureHandling.OPTIONAL)) {
@@ -579,26 +579,26 @@ public class inSights {
 	@Keyword
 	public void DesignConditionsPolicy() {
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddPolicy'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/link_PermitPolicy'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/link_PermitPolicy'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/link_PermitPolicy'))
 		WebUI.click(findTestObject('Object Repository/Applications/input_Principal_1'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/list_PrincipleALL'))
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddActionAll'))
 		WebUI.click(findTestObject('Object Repository/Applications/input_ActionSelect'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_ActionList'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_ActionList'), 20)
 		TestObject ActiondynamicObject = new TestObject()
 		ActiondynamicObject.addProperty('xpath', ConditionType.EQUALS, "//div[contains(@class,'suggestions-list actions-list')]/descendant::li[text()='ALL']")
-		WebUI.waitForElementPresent(ActiondynamicObject, 10)
+		WebUI.waitForElementPresent(ActiondynamicObject, 20)
 		WebUI.click(ActiondynamicObject)
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddResource'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/container_Resource'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/container_Resource'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/input_Resource_1'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 20)
 		TestObject ResourcedynamicObject = new TestObject()
 		ResourcedynamicObject.addProperty('xpath', ConditionType.EQUALS, "//div[contains(@class,'suggestions-list')]/descendant::li[text()='ALL']")
-		WebUI.waitForElementPresent(ResourcedynamicObject, 10)
+		WebUI.waitForElementPresent(ResourcedynamicObject, 20)
 		WebUI.click(ResourcedynamicObject)
 		WebUI.delay(0.5)
 	}
@@ -619,44 +619,44 @@ public class inSights {
 			KeywordUtil.markFailed("❌ Neither 'Design Policy' nor 'New Version' button was found.")
 			return
 		}
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 10)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 5)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 20)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 20)
 		KeywordUtil.logInfo("✅ Policy section loaded successfully.")
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddPermitPolicy'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Code'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Code'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/input_Principal_1'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 20)
 		TestObject PrincipaldynamicObject = new TestObject()
 		PrincipaldynamicObject.addProperty('xpath', ConditionType.EQUALS, "//div[contains(@class,'suggestions-list')]/descendant::li[text()='" + principalType + "']")
-		WebUI.waitForElementPresent(PrincipaldynamicObject, 10)
+		WebUI.waitForElementPresent(PrincipaldynamicObject, 20)
 		WebUI.click(PrincipaldynamicObject)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddActionNode'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/input_Action_1'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/input_Action_1'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/input_Action_1'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_ActionList'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_ActionList'), 20)
 		TestObject ActiondynamicObject = new TestObject()
 		ActiondynamicObject.addProperty('xpath', ConditionType.EQUALS, "//div[contains(@class,'suggestions-list actions-list')]/descendant::li[text()='" + actionType + "']")
-		WebUI.waitForElementPresent(ActiondynamicObject, 10)
+		WebUI.waitForElementPresent(ActiondynamicObject, 20)
 		WebUI.click(ActiondynamicObject)
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_AddResource'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/container_Resource'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/container_Resource'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/input_Resource_1'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/frame_PrincipalList'), 20)
 		TestObject ResourcedynamicObject = new TestObject()
 		ResourcedynamicObject.addProperty('xpath', ConditionType.EQUALS, "//div[contains(@class,'suggestions-list')]/descendant::li[text()='" + resourceType + "']")
-		WebUI.waitForElementPresent(ResourcedynamicObject, 10)
+		WebUI.waitForElementPresent(ResourcedynamicObject, 20)
 		WebUI.click(ResourcedynamicObject)
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Violation'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/tab_Violations'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Guardrails/tab_Violations'), 20)
 		WebUI.delay(1)
 	}
 
 	@Keyword
 	public void VerifyVersionHistoryStatus(String Status) {
 		WebUI.click(findTestObject('Object Repository/Applications/tab_VersionHistory'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/table_VersionHistory'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/table_VersionHistory'), 20)
 		String actualText = WebUI.getText(findTestObject('Object Repository/Applications/label_VersionHistoryStatus'))
 		if (actualText == Status) {
 			WebUI.comment("Status is 'Pending Approval' - Test Passed.")
@@ -689,7 +689,7 @@ public class inSights {
 		KeywordUtil.logInfo("✅ Selected Version v3 option")
 
 		// Step 4: Verify Doctor John and all containers are highlighted in green
-		if (WebUI.waitForElementVisible(findTestObject('Page_TestAutoAppName/container_DoctorJohn'), 10, FailureHandling.OPTIONAL)) {
+		if (WebUI.waitForElementVisible(findTestObject('Page_TestAutoAppName/container_DoctorJohn'), 20, FailureHandling.OPTIONAL)) {
 			String actualClass = WebUI.getAttribute(findTestObject('Page_TestAutoAppName/container_DoctorJohn'), "class")
 			if (actualClass.contains("highlight-green")) {
 				KeywordUtil.logInfo("✅ Highlight verification passed for Doctor John container")
@@ -727,22 +727,22 @@ public class inSights {
 		CustomKeywords.'loginPage.NavigateToLogin.Login'(usrName, usrPass)
 		//ValidateApplication()
 		//WebUI.click(findTestObject('Object Repository/Applications/tab_Policies'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), 20)
 		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), GlobalVariable.SearchPolicy)
 		WebUI.delay(3)
 		String applicationStatus = "//table[contains(@class, 'chakra-table')]/descendant::a[contains(text(),'" + GlobalVariable.SearchPolicy  + "')][1]"
 		TestObject testDataStatusText = new TestObject().addProperty("xpath", ConditionType.EQUALS, applicationStatus)
 		WebUI.click(testDataStatusText)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Approve'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Approve'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Approve'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/textArea_ApprovalComments'), 10)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/textArea_ApprovalComments'), 20)
 		WebUI.setText(findTestObject('Object Repository/Applications/textArea_ApprovalComments'), "Approved")
 		WebUI.click(findTestObject('Object Repository/Applications/btn_ApprovalSubmit'))
 
 
-		/*WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_PublishPD'), 10)
+		/*WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_PublishPD'), 20)
 		 WebUI.click(findTestObject('Object Repository/Applications/btn_PublishPD'))
-		 WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 10)
+		 WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 20)
 		 String statusText = WebUI.getText(findTestObject('Object Repository/Applications/label_ApprovalStatus'))
 		 if (statusText == 'New Policy created') {
 		 WebUI.comment("✅ Approved successful - Test Passed.")

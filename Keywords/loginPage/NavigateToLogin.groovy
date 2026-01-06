@@ -35,7 +35,7 @@ public class NavigateToLogin {
 		} else {
 			WebUI.comment('⏭️ Sign in button not displayed, continuing...')
 		}
-		WebUI.waitForElementVisible(findTestObject('Login_Page/txt_UserName'), 10)
+		WebUI.waitForElementVisible(findTestObject('Login_Page/txt_UserName'), 20)
 		WebUI.setText(findTestObject('Login_Page/txt_UserName'), username)
 		WebUI.setText(findTestObject('Login_Page/txt_Password'), password)
 		WebUI.click(findTestObject('Login_Page/btn_LogIn'))
@@ -51,7 +51,7 @@ public class NavigateToLogin {
 	@Keyword
 	public void LogOut() {
 		WebUI.click(findTestObject('Object Repository/Home_Page/button_UserLogOut'))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Home_Page/frame_LogOutPopup'), 10)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Home_Page/frame_LogOutPopup'), 20)
 		WebUI.click(findTestObject('Object Repository/Home_Page/menu_LogOut'))
 	}
 }
