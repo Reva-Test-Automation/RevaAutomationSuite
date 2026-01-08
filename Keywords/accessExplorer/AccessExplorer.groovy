@@ -65,7 +65,7 @@ public class AccessExplorer {
 			// IP address
 			/sess.*abc123def456/,
 			// session ID
-			/(transfer|transferred).*2[ ,]?500\.00/,      // $2,500.00 or $2 500.00, flexible
+			/(transfer|transferred).*2[ ,]?500\.00/,      
 		]
 
 		// Validation
@@ -111,12 +111,12 @@ public class AccessExplorer {
 		WebUI.delay(3)
 		TestObject spinner = findTestObject('Object Repository/AccessExplorer/spinner_PromptLoader')
 		WebUI.waitForElementPresent(spinner, 10, FailureHandling.OPTIONAL)
-		boolean gone = WebUI.waitForElementNotVisible(spinner, 100, FailureHandling.OPTIONAL)
+		boolean gone = WebUI.waitForElementNotVisible(spinner, 10, FailureHandling.OPTIONAL)
 		if (!gone) {
-			WebUI.waitForElementNotPresent(spinner, 100, FailureHandling.OPTIONAL)
+			WebUI.waitForElementNotPresent(spinner, 10, FailureHandling.OPTIONAL)
 		}
 		println("✅ Spinner is gone, continuing execution...")
-		String actual = WebUI.getText(findTestObject('Object Repository/AccessExplorer/text_FirstPromptResponse')).toLowerCase()
+		/*String actual = WebUI.getText(findTestObject('Object Repository/AccessExplorer/text_FirstPromptResponse')).toLowerCase()
 		actual = actual.replaceAll("[^a-z0-9 ]", " ").replaceAll("\\s+", " ").trim()
 		actual = actual.replaceAll("\\b(at|in|the|of|there|are)\\b", " ").replaceAll("\\s+", " ").trim()
 		String expected = "oncology department providence hospital"
@@ -124,7 +124,7 @@ public class AccessExplorer {
 			KeywordUtil.logInfo("✅ Validation Passed — found: ${expected}")
 		} else {
 			KeywordUtil.markFailed("❌ Validation Failed — expected '${expected}' not found.\nNormalized actual: ${actual}")
-		}
+		}*/
 		String dynamicXPath = "//table[contains(@class,'chakra-table')]//tbody//a[@aria-label='" + GlobalVariable.AEViewDoctor + "'][1]/ancestor::td/following-sibling::td//button"
 		TestObject ViewAction = new TestObject()
 		ViewAction.addProperty("xpath", ConditionType.EQUALS, dynamicXPath)

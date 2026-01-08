@@ -76,7 +76,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'TestAutoAppName-5'</initValue>
+      <initValue>'TestAutoAppName-8'</initValue>
       <name>ApplicationName</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
@@ -671,7 +671,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'prescribeMedication,Providence-Hospital,dischargePatient,setSalary,getPatientRecord,getStaffDetails,performTest,setBudget,editPatientRecord,commentPatientRecord,Nata Coathup'</initValue>
+      <initValue>'Nata Coathup,Test_Automation_App,assignPatient,dischargePatient,editPatientRecord,getSalary,getStaffDetails'</initValue>
       <name>AEAccessMapValues</name>
       <protected>false</protected>
       <valueType>STRING</valueType>

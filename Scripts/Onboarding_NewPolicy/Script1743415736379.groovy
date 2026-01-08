@@ -32,7 +32,7 @@ import org.openqa.selenium.Keys as Keys
        		  
 		CustomKeywords.'onBoarding.CreateApplication.DesignSchema'()
 		
-		CustomKeywords.'onBoarding.CreateApplication.captureNetworkLogs'()
+		//CustomKeywords.'onBoarding.CreateApplication.captureNetworkLogs'()
 		
 		CustomKeywords.'onBoarding.CreateApplication.DefineAttribute'()
 	  
