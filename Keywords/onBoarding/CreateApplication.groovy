@@ -48,6 +48,8 @@ public class CreateApplication {
 	@Keyword
 	public void FillApplicationDetails(String appName, String category, String tags, String owners, String description) {
 		try {
+			WebUI.delay(3)
+			WebUI.waitForPageLoad(10000)
 			TestObject onboardingBtn = findTestObject('Object Repository/Applications/btn_OnBoarding')
 			WebUI.verifyElementClickable(onboardingBtn)
 			WebUI.click(onboardingBtn)

@@ -76,7 +76,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'TestAutoAppName-8'</initValue>
+      <initValue>'TestAutoAppName'</initValue>
       <name>ApplicationName</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
