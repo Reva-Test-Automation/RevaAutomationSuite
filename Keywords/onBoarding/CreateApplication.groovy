@@ -463,6 +463,7 @@ public class CreateApplication {
 			WebUI.click(findTestObject('Object Repository/Applications/card_TestData'))
 			KeywordUtil.logInfo("Clicked 'Upload Test data' card.")
 		}
+		WebUI.delay(2)
 		TestObject fileInput = findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload')
 		String projectDir = RunConfiguration.getProjectDir()
 		String filePath = projectDir + "/TestData/" + fileName + ".zip"
