@@ -529,6 +529,7 @@ public class inSights {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/SettingsTab/select_AVPNewPolicy'), 20)
 		WebUI.click(findTestObject('Object Repository/SettingsTab/select_AVPNewPolicy'))
 		WebUI.click(findTestObject('Object Repository/SettingsTab/btn_Save'))
+		WebUI.delay(2)
 		if (WebUI.verifyElementVisible(findTestObject('Object Repository/SettingsTab/label_StatusOnline'), FailureHandling.OPTIONAL)) {
 			KeywordUtil.markPassed("Policy store status is Online.")
 		} else {

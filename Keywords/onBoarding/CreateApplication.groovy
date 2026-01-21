@@ -466,7 +466,7 @@ public class CreateApplication {
 		WebUI.delay(2)
 		TestObject fileInput = findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload')
 		String projectDir = RunConfiguration.getProjectDir()
-		String filePath = projectDir + "/TestData/" + fileName + ".zip"
+		String filePath = projectDir + "/Include/resources/${fileName}.zip"
 		File file = new File(filePath)
 		if (!file.exists()) {
 			WebUI.comment("❌ File not found: " + filePath)
