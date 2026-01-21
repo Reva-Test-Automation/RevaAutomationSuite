@@ -28,9 +28,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.core.exception.StepFailedException
 import com.kms.katalon.core.util.KeywordUtil
-/*import org.openqa.selenium.devtools.DevTools
-import org.openqa.selenium.devtools.v142.network.Network
-import org.openqa.selenium.devtools.v142.network.model.Response*/
+import CustomKeywords
 import java.util.function.Consumer
 import org.openqa.selenium.logging.LogType
 
@@ -466,13 +464,15 @@ public class CreateApplication {
 			KeywordUtil.logInfo("Clicked 'Upload Test data' card.")
 		}
 		WebUI.delay(2)
-		String projectDir = RunConfiguration.getProjectDir()
+		/*String projectDir = RunConfiguration.getProjectDir()
 		String filePath = projectDir + "/Include/resources/${fileName}.zip"
 		def driver = DriverFactory.getWebDriver()
 		WebElement fileInput = WebUiCommonHelper.findWebElement(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload'),10)		
 		((JavascriptExecutor) driver).executeScript("arguments[0].style.display='block'; arguments[0].style.visibility='visible';",	fileInput)		
 		WebUI.delay(1)
-		fileInput.sendKeys(filePath)
+		fileInput.sendKeys(filePath)*/
+		String filePath = System.getProperty("user.dir") + '\\Include\\resources\\TestData_template.zip'
+		CustomKeywords.'com.katalon.testcloud.FileExecutor.uploadFileToWeb'(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload'), filePath)
 		WebUI.comment("✅ File uploaded successfully: " + filePath)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Upload'))
 		WebUI.delay(2)
