@@ -7,9 +7,12 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.annotation.Keyword
+import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.testobject.ConditionType
 import org.openqa.selenium.JavascriptExecutor
 import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By
+import com.kms.katalon.core.webui.common.WebUiCommonHelper
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.interactions.Actions
 import com.kms.katalon.core.checkpoint.Checkpoint
@@ -23,7 +26,6 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.exception.StepFailedException
 import com.kms.katalon.core.util.KeywordUtil
 /*import org.openqa.selenium.devtools.DevTools
@@ -464,18 +466,13 @@ public class CreateApplication {
 			KeywordUtil.logInfo("Clicked 'Upload Test data' card.")
 		}
 		WebUI.delay(2)
-		TestObject fileInput = findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload')
 		String projectDir = RunConfiguration.getProjectDir()
 		String filePath = projectDir + "/Include/resources/${fileName}.zip"
-		File file = new File(filePath)
-		println "FILE PATH: ${filePath}"
-		println "EXISTS: ${file.exists()}"
-		println "CAN READ: ${file.canRead()}"
-		if (!file.exists()) {
-			WebUI.comment("❌ File not found: " + filePath)
-			return
-		}
-		WebUI.uploadFile(fileInput, filePath)
+		def driver = DriverFactory.getWebDriver()
+		WebElement fileInput = WebUiCommonHelper.findWebElement(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload'),10)		
+		((JavascriptExecutor) driver).executeScript("arguments[0].style.display='block'; arguments[0].style.visibility='visible';",	fileInput)		
+		WebUI.delay(1)
+		fileInput.sendKeys(filePath)
 		WebUI.comment("✅ File uploaded successfully: " + filePath)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Upload'))
 		WebUI.delay(2)
