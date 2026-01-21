@@ -468,6 +468,9 @@ public class CreateApplication {
 		String projectDir = RunConfiguration.getProjectDir()
 		String filePath = projectDir + "/Include/resources/${fileName}.zip"
 		File file = new File(filePath)
+		println "FILE PATH: ${filePath}"
+		println "EXISTS: ${file.exists()}"
+		println "CAN READ: ${file.canRead()}"
 		if (!file.exists()) {
 			WebUI.comment("❌ File not found: " + filePath)
 			return
