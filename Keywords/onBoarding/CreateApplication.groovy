@@ -385,7 +385,7 @@ public class CreateApplication {
 	public void UploadHospitalSchemaJson(String jsonFile) {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_UploadJSON'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_UploadJSON'))
-		TestObject fileInput = findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload')
+		/*TestObject fileInput = findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload')
 		String projectDir = RunConfiguration.getProjectDir()
 		String filePath = projectDir + "/TestData/" + jsonFile + ".json"
 		File file = new File(filePath)
@@ -393,7 +393,10 @@ public class CreateApplication {
 			WebUI.comment("❌ JSON file not found: " + filePath)
 			return
 		}
-		WebUI.uploadFile(fileInput, filePath)
+		WebUI.uploadFile(fileInput, filePath)*/
+		WebUI.delay(10)
+		String filePath = RunConfiguration.getProjectDir() +  "/TestData/" + jsonFile + ".json"
+		CustomKeywords.'com.katalon.testcloud.FileExecutor.uploadFileToWeb'(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload'), filePath)
 		WebUI.comment("✅ JSON file uploaded successfully: " + filePath)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Confirm'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Confirm'))
