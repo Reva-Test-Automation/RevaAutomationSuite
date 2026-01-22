@@ -17,6 +17,12 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Onboarding_NewPolicy</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>ea316bb1-8b93-4041-9bd2-0dc1801540ad</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>341af574-c329-468c-a3e7-498d56196833</guid>
