@@ -463,23 +463,9 @@ public class CreateApplication {
 			WebUI.click(findTestObject('Object Repository/Applications/card_TestData'))
 			KeywordUtil.logInfo("Clicked 'Upload Test data' card.")
 		}
-		WebUI.delay(10)
-		/*String projectDir = RunConfiguration.getProjectDir()
-		String filePath = projectDir + "/TestData/TestData_template.zip"
-		def driver = DriverFactory.getWebDriver()
-		WebElement fileInput = WebUiCommonHelper.findWebElement(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload'),10)		
-		((JavascriptExecutor) driver).executeScript("arguments[0].style.display='block'; arguments[0].style.visibility='visible';",	fileInput)		
-		WebUI.delay(1)
-		fileInput.sendKeys(filePath)*/
-		/*String filePath = RunConfiguration.getProjectDir() +
-        "/TestData/TestData_template.zip"
-		assert new File(filePath).exists() : "File NOT found: " + filePath
-		CustomKeywords.'com.katalon.testcloud.FileExecutor.uploadFileToWeb'(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload'), filePath)*/
-		
-		String filePath = RunConfiguration.getProjectDir() + "/TestData/TestData_template.zip"
+		WebUI.delay(10)		
+		String filePath = RunConfiguration.getProjectDir() +  "/TestData/" + fileName + ".zip"
 		CustomKeywords.'com.katalon.testcloud.FileExecutor.uploadFileToWeb'(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload'), filePath)
-		
-		
 		WebUI.comment("✅ File uploaded successfully: " + filePath)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Upload'))
 		WebUI.delay(2)
