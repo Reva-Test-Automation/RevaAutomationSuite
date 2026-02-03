@@ -636,7 +636,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'show me all doctors from oncology department from Providence-Hospital from prod environment'</initValue>
+      <initValue>'Show me all doctors from oncology department of providence hospital application from prod environment'</initValue>
       <name>AEPromptDoc</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
@@ -673,6 +673,13 @@
       <description></description>
       <initValue>'eyJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..LYkFsB_7R880gFTy.ZDbrbpj1HHSTQPPFMjLQLwxXlL2370i0lBT4hOUxdluYq-a8cPH8kz6UNhagirbV_4esv6l335EHT4HG2FcM_l61kJdmX5Qdhz1PXYl8o03te9csrpypruVyfPLfIAT0TaSNr7S0clQ1FYCiI6_DQyXTQb9RDv-FSgYUIYt2--hiYSiJrstUCZljIWZjqGkjW4MxTOtsc1hJY3ASb57V-AIZZRQnFxHlIerE5aVibS8E90eh8gbzS9sK8mA.Qf3Oe7rDiIjUmOa7E12ZaA'</initValue>
       <name>PDP_GetToken</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'allow all users to create transactions if their role is Account Holder'</initValue>
+      <name>BankingAIPrompt</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>

@@ -28,7 +28,7 @@
       <guid>341af574-c329-468c-a3e7-498d56196833</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Onboarding_ExistingPolicy</testCaseId>
+      <testCaseId>Test Cases/Onboarding_HospitalPolicy</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

@@ -407,8 +407,10 @@ public class CreateApplication {
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/title_Attributes'), 20)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/button_Continue'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Update'), 20)
+		WebUI.delay(10)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Update'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/node_AISuggPolicies'), 20)
+		WebUI.delay(20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Skip'))
 	}
 
@@ -471,9 +473,9 @@ public class CreateApplication {
 		CustomKeywords.'com.katalon.testcloud.FileExecutor.uploadFileToWeb'(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_FileUpload'), filePath)
 		WebUI.comment("✅ File uploaded successfully: " + filePath)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Upload'))
-		WebUI.delay(2)
+		WebUI.delay(10)
 		WebUI.click(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_Confirm'))
-		WebUI.delay(2)
+		WebUI.delay(10)
 	}
 
 	@Keyword

@@ -76,7 +76,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'TestAutoAppName'</initValue>
+      <initValue>'TestAutoAppName-12'</initValue>
       <name>ApplicationName</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
@@ -650,7 +650,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'show me all doctors from oncology department from test automation app'</initValue>
+      <initValue>'Show me all doctors from oncology department of ProvidenceHospital application from prod environment'</initValue>
       <name>AEPromptDoc</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
@@ -671,8 +671,15 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Nata Coathup,Test_Automation_App,assignPatient,dischargePatient,editPatientRecord,getSalary,getStaffDetails'</initValue>
+      <initValue>'Nata Coathup,ProvidenceHospital,assignPatient,\r\ngetPatientRecord,getSalary,getStaffDetails,setSalary'</initValue>
       <name>AEAccessMapValues</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'allow all users to create transactions if their role is Account Holder'</initValue>
+      <name>BankingAIPrompt</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>

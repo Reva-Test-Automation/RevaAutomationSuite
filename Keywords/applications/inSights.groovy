@@ -263,9 +263,42 @@ public class inSights {
 		WebUI.back()
 		WebUI.delay(0.5)
 	}
+	
+	
+	@Keyword
+	public void DesignBankingPolicy() {
+		WebUI.click(findTestObject('Object Repository/Applications/tab_Policies'))
+		WebUI.delay(0.5)
+		TestObject DesignPolicyBtn = findTestObject('Object Repository/Applications/btn_DesignPolicy')
+		TestObject NewVersionBtn = findTestObject('Object Repository/Applications/btn_NewVersion')
+		if (WebUI.verifyElementPresent(DesignPolicyBtn, 5, FailureHandling.OPTIONAL)) {
+			WebUI.click(DesignPolicyBtn)
+			KeywordUtil.logInfo("Clicked 'Design Policy' button.")
+		} else if (WebUI.verifyElementPresent(NewVersionBtn, 5, FailureHandling.OPTIONAL)) {
+			WebUI.click(NewVersionBtn)
+			KeywordUtil.logInfo("Clicked 'New Version' button.")
+		} else {
+			KeywordUtil.markFailed("❌ Neither 'Design Policy' nor 'New Version' button was found.")
+			return
+		}
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 20)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Applications/buildPolicy_Section'), 20)
+		WebUI.click(findTestObject('Object Repository/Applications/btn_CreateWithAI'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/header_RevaAI'), 20)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/textArea_AIPrompt'), 20)
+		WebUI.delay(1)
+		WebUI.setText(findTestObject('Object Repository/Applications/textArea_AIPrompt'), GlobalVariable.BankingAIPrompt)
+		WebUI.click(findTestObject('Object Repository/Applications/btn_PromptEnter'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/text_AIResponse'), 20)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/btn_AIResponseYes'), 20)
+		WebUI.click(findTestObject('Object Repository/Applications/btn_AIResponseYes'))
+		WebUI.click(findTestObject('Object Repository/Applications/btn_CloseAI'))
+		WebUI.delay(0.5)
+		
+	}
 
 	@Keyword
-	public void DesignAIPolicy() {
+	public void DesignHospitalPolicy() {
 		WebUI.click(findTestObject('Object Repository/Applications/tab_Policies'))
 		WebUI.delay(0.5)
 		TestObject DesignPolicyBtn = findTestObject('Object Repository/Applications/btn_DesignPolicy')

@@ -28,15 +28,15 @@ import org.openqa.selenium.Keys as Keys
 		
 		CustomKeywords.'onBoarding.CreateApplication.FillApplicationDetails'(GlobalVariable.ApplicationName, GlobalVariable.AppCategory, GlobalVariable.ApplicationTags, GlobalVariable.AppOwner, GlobalVariable.AppDescription)		
 		
-		CustomKeywords.'onBoarding.CreateApplication.UploadHospitalSchemaJson'('hospital-schemav2')
+		CustomKeywords.'onBoarding.CreateApplication.UploadHospitalSchemaJson'('Schema_Secure-Bank')
 		
-		CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('Reva-EntityData-DemoAppv2')
+		CustomKeywords.'onBoarding.CreateApplication.UploadTestData'('TestData_template_SecureBank-App-Populated')
 		
 		CustomKeywords.'applications.inSights.ValidateApplication'()
 		
-		CustomKeywords.'applications.inSights.DesignAIPolicy'()
+		CustomKeywords.'applications.inSights.DesignBankingPolicy'()
 		
-		CustomKeywords.'applications.inSights.ProvideApprovals'(GlobalVariable.TestUserName, GlobalVariable.TestUserPassword)
+		//CustomKeywords.'applications.inSights.ProvideApprovals'(GlobalVariable.TestUserName, GlobalVariable.TestUserPassword)
 		
 		//CustomKeywords.'onBoarding.CreateApplication.AddEnvironmentsWithExistingPolicy'(GlobalVariable.EnvironmentName)
 		
@@ -44,7 +44,7 @@ import org.openqa.selenium.Keys as Keys
 					
 		//CustomKeywords.'onBoarding.CreateApplication.CheckForTheApplicationStatus'()
 		
-		CustomKeywords.'onBoarding.CreateApplication.DeleteApplication'()
+		//CustomKeywords.'onBoarding.CreateApplication.DeleteApplication'()
 		
 		//CustomKeywords.'commonFunctions.browserUtils.CloseBrowser'()
 		

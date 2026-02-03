@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Onboarding_BankingPolicy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>591ffa06-257e-457d-abc0-56a821ad7ed9</testCaseGuid>
+</TestCaseEntity>
