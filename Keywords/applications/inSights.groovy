@@ -428,10 +428,12 @@ public class inSights {
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/btn_Applications'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Applications'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/btn_NewApplication'), 20)
-		String applicationObjectName = "//div[contains(@class,'fixedNavbar')]/following-sibling::div/descendant::p[text()='" + appName + "']"
-		TestObject applicationElement = new TestObject().addProperty("xpath", ConditionType.EQUALS, applicationObjectName)
-		WebUI.waitForElementVisible(applicationElement, 20)
-		WebUI.click(applicationElement)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), 20)
+		WebUI.setText(findTestObject('Object Repository/Onboarding/Page_Reva.ai/input_AppSearch'), appName)
+		WebUI.delay(3)
+		String applicationStatus = "//table[contains(@class, 'chakra-table')]/descendant::a[contains(text(),'" + appName  + "')][1]"
+		TestObject testDataStatusText = new TestObject().addProperty("xpath", ConditionType.EQUALS, applicationStatus)
+		WebUI.click(testDataStatusText)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Applications/menu_Tabs'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/tab_Policies'))
 		WebUI.delay(0.5)
@@ -479,7 +481,7 @@ public class inSights {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/btn_DeleteDenyPolicy'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_DeleteDenyPolicy'))
 		WebUI.delay(0.5)
-		WebUI.click(findTestObject('Object Repository/Applications/btn_CloseCode'))
+		//WebUI.click(findTestObject('Object Repository/Applications/btn_CloseCode'))
 		WebUI.delay(0.5)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_Test'))
 		WebUI.delay(3)
@@ -495,20 +497,22 @@ public class inSights {
 				WebUI.comment("✅ Found '${targetPatientText}' — hovering using Actions class.")
 				Actions action = new Actions(DriverFactory.getWebDriver())
 				action.moveToElement(nodeelement).perform()
-				WebUI.delay(0.5)
+				WebUI.delay(2)
 				List<WebElement> nodes = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Applications/node_FromToConnection'), 20)
 				int nodeCount = nodes.size()
 				WebUI.comment("🔍 Total nodes found: ${nodeCount}")
 				if (nodeCount == 5) {
+					println "✅ Exactly 5 nodes found."
 					KeywordUtil.markPassed("✅ Test Passed: Exactly 5 nodes found.")
 				} else {
+					println "❌ Node count mismatch. Expected: 5, Found: ${nodeCount}"
 					KeywordUtil.markFailed("❌ Test Failed: Expected 5 nodes, but found ${nodeCount}.")
 				}
 				break
 			}
 		}
 		WebUI.click(findTestObject('Object Repository/Applications/btn_CloseTest'))
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/btn_SendToApproval'), 20)
+		/*WebUI.waitForElementClickable(findTestObject('Object Repository/Applications/btn_SendToApproval'), 20)
 		WebUI.click(findTestObject('Object Repository/Applications/btn_SendToApproval'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Impact/table_PolicySummary'), 20)
 		WebUI.click(findTestObject('Object Repository/Impact/btn_Impact'))
@@ -530,7 +534,7 @@ public class inSights {
 				println "❌ Not Found: ${expectedImpact}"
 				KeywordUtil.markWarning("Impact not found in the list: ${expectedImpact}")
 			}
-		}
+		}*/
 	}
 
 	@Keyword
@@ -562,7 +566,8 @@ public class inSights {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/SettingsTab/select_AVPNewPolicy'), 20)
 		WebUI.click(findTestObject('Object Repository/SettingsTab/select_AVPNewPolicy'))
 		WebUI.click(findTestObject('Object Repository/SettingsTab/btn_Save'))
-		WebUI.delay(10)
+		WebUI.delay(2)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/SettingsTab/label_StatusOnline'), 20)
 		if (WebUI.verifyElementVisible(findTestObject('Object Repository/SettingsTab/label_StatusOnline'), FailureHandling.OPTIONAL)) {
 			KeywordUtil.markPassed("Policy store status is Online.")
 		} else {

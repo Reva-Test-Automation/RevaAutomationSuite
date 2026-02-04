@@ -24,8 +24,10 @@ import org.openqa.selenium.Keys as Keys
 	
 	  CustomKeywords.'loginPage.NavigateToLogin.Login'(GlobalVariable.UserName, GlobalVariable.Password)		
 	  
-	  CustomKeywords.'applications.inSights.EditPolicy'("Test_Automation_App")
+	  CustomKeywords.'applications.inSights.EditPolicy'(GlobalVariable.PolicyDesignAppName)
 	  
+	  //CustomKeywords.'applications.inSights.EditPolicy'("Test_Automation_App")
+	 	  
 	  //CustomKeywords.'commonFunctions.browserUtils.CloseBrowser'()
 	  
 	  
